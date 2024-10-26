@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NIZAR SOILIHI</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+       document.addEventListener("DOMContentLoaded", function() {
+  var lienQuiSuisJe = document.getElementById("lien-qui-suis-je");
+  var sousMenu = document.getElementById("sous-menu");
+
+  lienQuiSuisJe.addEventListener("click", function(event) {
+    event.preventDefault();
+
+    if (sousMenu.style.display === "none") {
+      sousMenu.style.display = "block";
+    } else {
+      sousMenu.style.display = "none";
+    }
+  });
+});
+
+    </script> 
+</head>
+<body>
+
+<header id="entete1">
+    <a href="index.html"><img class="logo" src="D:\Audiobooks\Mon_site_Web\NR.png" title="Logo"></a>
+    <nav id="entete2">
+        <a class="entete" href="index.html">Accueil</a>
+        <a class="entete" href="blog.html">Blog</a>
+        <a class="entete" href="a-propos.html" id="lien-qui-suis-je">Qui suis je?<span class="fleche">&#9660;</span></a>
+            <div id="sous-menu">
+                <a href="infopersonnel.html">Information personnel</a>
+                <a href="parcours.html">Parcours</a>
+                <a href="experience.html">Expèriences</a>
+                <a href="competence.html">Compètences</a>
+                <a href="cv.html">Curriculum Vitae</a>
+            </div>
+        <a class="entete" href="contact.html">Contact</a>
+    </nav>
+    <nav id="reseau-sociaux">
+        <ul class="social-icons">
+            <li><a class="lien-rs" href="https://api.whatsapp.com/send?phone=+2693526100" title="Mon WhatsApp" target="_blank"><img id="icone-rs" src="https://png.pngtree.com/png-vector/20221018/ourmid/pngtree-whatsapp-phone-icon-png-image_6315989.png" alt="WhatsApp"></a></li>
+            <li><a class="lien-rs" href="https://www.facebook.com/nizar.soilihi.7" title="Mon Facebook" target="_blank"><img id="icone-rs" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/2021_Facebook_icon.svg/512px-2021_Facebook_icon.svg.png" alt="Facebook"></a></li>
+            <li><a class="lien-rs" href="https://www.instagram.com/nizar.s00/" title="Mon instagram" target="_blank"><img id="icone-rs" src="https://png.pngtree.com/png-vector/20221018/ourmid/pngtree-instagram-icon-png-image_6315974.png" alt="Instagram"></a></li>
+            <li><a class="lien-rs" href="https://t.me/drbynz" title="Mon Telegram" target="_blank"><img id="icone-rs" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Telegram_logo.svg/512px-Telegram_logo.svg.png" alt="Telegram"></a></li>
+        </ul>
+    </nav>
+</header>
+</body>
+<footer>
+    <p>&copy; 2024, MAROC / BENI MELLAL<br/> Ceci est un site personnel developpé par NIZAR SOILIIHI<br/>19/02/2024</p>
+</footer>
+</html>

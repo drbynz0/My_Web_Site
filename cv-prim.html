@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NIZAR SOILIHI</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" href="https://raw.githubusercontent.com/DrByNz/nizarsoilihi/main/NR0.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="stylecv.css">
+</head>
+<body>
+    
+    <header id="entete1">
+        <a href="index.html"><img class="logo" src="https://raw.githubusercontent.com/DrByNz/nizarsoilihi/main/NR0.png" title="Logo"></a>
+        <nav id="entete2" class="entete2">
+            <a class="entete" href="index.html">Accueil</a>
+            <a class="entete" href="blog.html">Blog</a>
+            <input type="checkbox" id="toggle-menu">
+            <label class="entete" for="toggle-menu">Qui suis je?<span class="fleche">&#9660;</span></label>
+                <div id="sous-menu">
+                    <a href="infopersonnel.html">A-propos de moi</a>
+                    <a href="cv.html">Curriculum Vitae</a>
+                </div>
+            <a class="entete" href="contact.html">Contact</a>
+        </nav>
+        <nav id="reseau-sociaux">
+            <ul class="social-icons">
+                <li><a class="icon-wap" href="https://api.whatsapp.com/send?phone=+2693526100" title="Mon WhatsApp" target="_blank"><i class="fab fa-whatsapp"></i></a></li>
+                <li><a class="icon-fb" href="https://www.facebook.com/nizar.soilihi.7" title="Mon Facebook" target="_blank"><i class="fab fa-facebook"></i></a></li>
+                <li><a class="icon-insta" href="https://www.instagram.com/nizar.s00/" title="Mon Instagram" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                <li><a class="icon-teleg" href="https://t.me/drbynz" title="Mon Telegram" target="_blank"><i class="fab fa-telegram"></i></a></li>
+            </ul>   
+        </nav>
+        <div class="menu-toggle" onclick="toggleMenu()">
+            <i class="fas fa-bars"></i>
+          </div>
+    </header>
+<div class="cover">
+    <P>Curriculum Vitae</P> 
+</div>
+</br>
+<div class="page-cv" id="float">
+    <div class="sidebar">
+        <div class="flechecv"><i class="fas fa-arrow-right"></i></div>
+        <h2><i class="fas fa-file-alt"></i> <span>Mon CV</span></h2>
+        <ul>
+            <li><a href="#" data-target="profile"><i class="fas fa-user"></i> <span>Profil</span></a></li>
+            <li><a href="#" data-target="education"><i class="fas fa-graduation-cap"></i> <span>Éducation</span></a></li>
+            <li><a href="#" data-target="experience"><i class="fas fa-briefcase"></i> <span>Expérience</span></a></li>
+            <li><a href="#" data-target="skills"><i class="fas fa-cogs"></i> <span>Compétences</span></a></li>
+            <li><a href="#" data-target="contact"><i class="fas fa-envelope"></i> <span>Contact</span></a></li>
+        </ul>
+        <div class="telecharger-cv">
+            <a href="https://raw.githubusercontent.com/DrByNz/nizarsoilihi/main/CV%20NIZAR%20SOILIHI.pdf" download="CV_NIZAR_SOILIHI.pdf"><i class="fas fa-download"></i> <span>Télécharger</span></a>
+        </div>
+    </div>
+    <div class="content">
+        <section id="profile">
+            <h1>Profil</h1>
+            <!--<div class="header">
+                <img class="imgprofil3" src="https://raw.githubusercontent.com/DrByNz/nizarsoilihi/main/nizar.png" alt="Photo">
+            </div>-->
+            <div class="cv-nom">
+                <h2>NIZAR SOILIHI</h2>
+                <span>ETUDIANT</span>
+            </div>
+            <p class="cv-desc">Etudiant en génie informatique passionné par la technologie et
+                l'innovation. Quelques compétences en programmation et en
+                développement web, acquises à travers des projets académiques et
+                des expériences pratiques. Capacité à travailler efficacement en
+                équipe. Enthousiaste à l'idée d'approfondir mes connaissances et
+                d''acquérir de nouvelles compétences dans le domaine en
+                constante évolution de l'informatique.</p>
+        </section>
+        <section id="education">
+            <h1>Éducation</h1>
+            <div class="diplome">
+                <h2>Diplômes et Formations</h2>
+                <ul>
+                    <li>Etude Universitaire<br/>Génie Informatique - École Supérieur de Technologie BENI MELLAL - 2023/2024</li>
+                    <li>Etude Universitaire<br/>Mathématique, Informatique, Physique - Faculité de Sciences et Téchnique ERRACHIDIA - 2022/2023</li>
+                    <li>Baccalauréat de l'enseignement secondaire(Série C/ Mention: Assez bien) - Lycée Scientifique Cheikh Hamdan Ben Rachid (COMORES) - 2021/2022</li>
+                    <li>Brevet d'Etude du Premier Cycle (B.E.P.C): - Ecole Communautaire Mohammadiat (Irohé/COMORES) - 2018/2019</li>
+                </ul>
+            </div>
+        </section>
+        <section id="experience">
+            <h1>Expérience</h1>
+            <div class="exp-pro">
+                <h2>Expérience Professionnelle</h2>
+                <ul>
+                    <li>Aucune pour le moment!</li>
+                </ul>
+            </div>
+        </section>
+        <section id="skills">
+            <div class="skills">
+                <h1>Compétences Informatiques</h1>
+                <ul>
+                    <li>Word, Power Point</li>
+                    <li>Développement Web</li>
+                    <li>Bureautique</li>
+                    <li>Infographie</li>
+                    <li>Programmation en C</li>
+                </ul>
+            </div>
+        </section>
+        <section id="langue">
+            <div class="lang">
+                <h2>Connaissances linguistiques</h2>
+                <div>
+                    <article>
+                    Français
+                    <span>Maitise</span>
+                    </article>
+                    <article>
+                    Anglais<span>Niveau scolaire</span>
+                    </article>
+                    <article>
+                    Arabe
+                    <span>Niveau Scolaire</span>
+                    </article>
+                </div>
+            </div>
+        </section>
+        <section id="loisir">
+            <div class="loisir">
+                <h2>Centre D'intêret</h2>
+                    <span>Intenet: Recherches, Réseaux sociaux</span>
+                    <span>Cinéma: Science fiction</span>
+                    <span>Voyager</span>
+            </div>
+        </section>
+    </div>
+</div>
+<script src="script.js"></script>
+<script src="scriptcv.js"></script>
+</body>
+
+<footer>
+    <div class="footer1">
+        <div class="info-legale">
+            <h2>Informations légales</h2>
+            <a href="infopersonnel.html">Qui suis-je?</a>
+            <a href="mentionslegales.html">Mentions légales</a>
+        </div>
+        <div class="lien-utile">
+            <h2>Liens utiles</h2>
+            <a href="https://www.w3schools.com/">W3Schools</a>
+            <a href="https://www.openclassroom.com/">openclassroom</a>
+            <a href="https://estbm.ac.ma/web/pages/home.php">EST Béni Mellal</a>
+            <a href="https://fr.wikipedia.org/wiki/Comores_(pays)">Mon origine</a>
+        </div>
+        <div class="coordonnee-footer">
+            <h2>Contact</h2>
+            <span class="phone"><i class="fas fa-phone"></i><strong class="coordonnee">+212 642 77 4321</strong></span><br/>
+            <span class="envelope"><i class="fas fa-envelope"></i><strong class="coordonnee">soilihinizar04@gmail.com</strong></span><br/>
+            <span class="map"><i class="fas fa-map-marker-alt"></i><strong class="coordonnee">Maroc / Ben Millal-Atlas</strong></span>
+        </div>
+        <div class="contact-footer">
+            <span><a href="contact.html">Contactez-moi<i class="fas fa-envelope"></i></a></span>
+            <img class="logo-footer" src="https://raw.githubusercontent.com/DrByNz/nizarsoilihi/main/NR0.png" title="Logo">
+            <nav class="contact-icon-res">
+                <a class="icon-fb" href="https://www.facebook.com/nizar.s00" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-facebook"></i>
+                </a>
+                <a class="icon-wap" href="https://api.whatsapp.com/send?phone=+212642774321" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-whatsapp"></i>
+                </li>
+                <a class="icon-insta" href="https://www.instagram.com/nizar.s00" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a class="icon-teleg" href="https://t.me/drbynz" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-telegram"></i>
+                </a>
+            </nav>
+        </div>
+    </div>
+    <div class="footer2">
+    <p>&copy; 2024, MAROC | BENI MELLAL<br/>Ceci est un site personnel developpé par NIZAR SOILIIHI<br/>19/02/2024<br/>Tous droits réservés.</p>
+    </div>
+</footer>
+</html>

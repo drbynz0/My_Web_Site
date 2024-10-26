@@ -1,0 +1,136 @@
+@media only screen and (max-width: 770px) {
+    .diplome, .experience, .competence {
+        margin-left: 0%;
+        margin-right: 0%;
+    }
+    .sous-section {
+        flex-direction:column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+.a-propos {
+    display: flex;
+    flex-direction: column ;
+    justify-content: center;
+}
+#aboutThis {
+    text-align: center;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin: 20px;
+    animation: float-section 1s forwards;
+}
+#aboutThis strong {
+    color: #5ca7f8;
+}
+section {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+section main {
+
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background-color: #172040;
+    padding: 0%;
+    display: flex;
+    justify-content: space-around;
+    padding-left: 5px;
+    padding-right: 5px;
+    border-bottom: solid 1px;
+    height: auto;
+}
+section span i {
+    position: absolute;
+    font-size: 30px;
+    bottom: 3px;
+    right: 7px;
+    cursor: pointer;
+}
+section div i:hover {
+    color: rgb(9, 174, 224);
+}
+.diplome, .experience, .competence {
+    position: relative;
+    background-color: #0a0a17c1;
+    margin-left: 10%;
+    margin-right: 10%;
+    border-radius: 10px;
+    box-shadow: 4px 7px 15px rgba(0, 0, 0, 0.765);
+}
+.sous-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    animation: float-section 1s forwards;
+}
+
+section h4 {
+    padding: 0%;
+    position: relative;
+    color: #65e0e8;
+    text-decoration: dashed;
+}
+.sous-section a {
+    text-decoration: none;
+    color: #a2c6ec;
+}
+.sous-section a:hover{
+    color: #007bff;
+    transition: color 0.4s;
+}
+.sous-section article {
+    margin: 12px;
+    width: 500px;
+    text-align: justify;
+}
+.infoperso div {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    animation: float-section 1s forwards;
+}
+.infoperso li {
+    margin-top: 12px;
+    list-style: none;
+}
+.infoperso li strong {
+    color: #5ca7f8;
+}
+.sous-section img {  
+    width: 400px;
+    height: 250px;
+    border-radius: 12px;
+}
+.a-propos {
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+.a-propos h2 {
+    border-bottom: solid rgb(187, 177, 177);
+    color: #c5e2f5;
+}
+.voir-cv {
+    margin: 30px;
+    display: flex;
+    justify-content: center;
+}
+.voir-cv a {
+    text-align: center;
+    padding: 10px;
+    border-radius: 10px;
+    width: 90px;
+    background-color: #455a73;
+    text-decoration: none;
+    color: white;
+    transition: 0.3s;
+}
+.voir-cv a:hover {
+    background-color: rgba(17, 210, 188, 0.792);
+    transform: scale(1.1);
+    transition: 0.3s;
+}

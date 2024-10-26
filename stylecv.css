@@ -1,0 +1,419 @@
+/* curriculum vitae */
+@media only screen and (max-width: 770px) {
+    .sidebar {
+        display: flex;
+        padding: 0%;
+        border-radius: 20px;
+        height: 90px;
+        transition: 5s;
+        width: 100%;
+        z-index: 1000;
+    }
+    .flechecv {
+        float: right;
+        margin: 0%;
+        transform: rotate(-90deg);
+    }
+    .sidebar h2 {
+        margin: 0%;
+        text-align: left;
+    }
+    .sidebar ul, .telecharger-cv {
+        display: none;
+    }
+    .content {
+        width: 100%;
+    }
+    
+    .page-cv {
+        display: flex;
+        flex-direction: column;
+    }
+    .part1 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .ecole, .part2 {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        margin: 0px;
+    }
+}
+.page-cv {
+    font-family: Arial, sans-serif;
+    background-color: #293b51a9;
+    border-radius: 20px;
+    margin: 5px;
+    padding: 0;
+    display: flex;
+    bottom: 0;
+}
+
+.flechecv {
+    width: 32px;
+    cursor: pointer;
+    transform: rotate(180deg);
+}
+
+.flechecv i {
+    font-size: 30px;
+}
+
+.flechecv:hover {
+    transition: 0.3s;
+}
+
+.sidebar {
+    position: relative;
+    display: block;
+    background-color: #2e3b4e;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    color: white;
+    padding: 30px;
+    box-sizing: border-box;
+    transition: 0.5s;
+}
+
+.sidebar h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: rgba(17, 210, 188, 0.989);
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+    animation: float-sidebar 2s forwards;
+}
+@keyframes float-sidebar {
+    0% {
+        opacity: 0;
+}
+    100% {
+        opacity: 1;
+    }
+}
+
+.sidebar ul li {
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+    display: flex;
+}
+
+.sidebar ul li a {
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.sidebar ul li a:hover {
+    background-color: #455a73;
+    transform: translateX(12px);
+    transition: 0.3s;
+}
+
+.content {
+    padding: 20px;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.content section {
+    display: none; /* Cache toutes les sections par défaut */
+    margin-bottom: 50px;
+    animation: section 1s forwards;
+}
+@keyframes section {
+    0% {
+        transform: translateY(-10%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+section.activecv {
+    display: block; /* Affiche la section active */
+}
+
+.content section h1 {
+    border-bottom: 2px solid #2e3b4e;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    color: rgba(17, 159, 210, 0.989);
+}
+
+.header {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin: 15px;
+}
+
+.header img {
+    width: 200px;
+    height: 200px;
+    border: solid 2px rgb(21, 98, 215);
+    border-radius: 50%;
+    box-shadow: 4px 7px 15px rgba(0, 0, 0, 0.765);
+
+}
+.part1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(45, 68, 116, 0.591);
+    padding: 10px;
+    border-radius: 20px;
+    box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.765);
+}
+
+.part2 {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+#profile details, #education details {
+    margin-top: 20px;
+}
+summary {
+    cursor: pointer;
+}
+summary:hover {
+    color: #dde298;
+    transition: 0.3s;
+}
+.part2 div {
+    background-size: cover;
+    background-position: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding-top: 100px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    box-shadow: 4px 7px 15px rgba(0, 0, 0, 0.765);
+    transition: 0.5s;
+    width: auto;
+    border-bottom-right-radius: 20px;
+}
+
+.part2 div:hover {
+    transform: scale(1.1);
+    transition: 0.5s;
+}
+
+
+.fr span, .ang span, .ar span {
+    color: rgb(219, 190, 147);
+    font-weight: bold;
+}
+
+.fr {
+    background-image: url('https://wallpapercave.com/wp/iqAVqhm.jpg');
+    padding-right: 150px;
+    background-blend-mode: overlay;
+}
+.ang {
+    background-image: url('https://cdn.futura-sciences.com/sources/images/qr/Celine/drapeau%20angleterre%20%C2%A0lidiia%2C%20Adobe%20Stock.jpeg');
+    padding-right: 100px;
+    background-blend-mode: overlay;
+}
+.ar {
+    background-image: url('https://img.le-dictionnaire.com/arabiesaoudite-drapeau.jpg');
+    padding-right: 100px;
+    background-blend-mode: overlay;
+}
+
+.diplome h4 {
+    margin: 0%;
+    padding: 0%;
+    color: #dde298;
+    padding-top: 7px;
+}
+
+.diplome span {
+    color: rgba(180, 203, 223, 0.884);
+}
+
+.ecole {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 5px;
+    gap: 10px;
+    margin-top: 5px;
+}
+
+.ecole div {
+    background-size: cover;
+    background-position: 100%;
+    padding-right: 150px;
+    background-color: rgba(0, 0, 0, 0.5);
+    background-blend-mode: overlay;
+    box-shadow: 4px 7px 15px rgba(0, 0, 0, 0.765);
+    padding: 70px;
+    width: auto;
+    text-align: center;
+    
+}
+
+.ecole div:hover {
+    transform: scale(1.1);
+    transition: 0.5s;
+}
+.ecole div a {
+    color: #e1e7ef;
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+.ecole div a:hover {
+    color: rgb(223, 166, 10);
+    transition: 0.5s;
+}
+
+.estbm {
+    background-image: url('https://estbm.ac.ma/web/img/bg-est.jpg');
+}
+
+.fsterr {
+    background-image: url('https://static.lematin.ma/files/lematin/images/articles/2016/08/FST_Errachidia.jpg');
+}
+
+.ls {
+    background-image: url('https://raw.githubusercontent.com/DrByNz/nizarsoilihi/main/LSCHBR.jpg');
+}
+
+.exp-pro h4 {
+    margin: 0%;
+    padding: 0%;
+    color: #dde298;
+    padding-top: 7px;
+}
+
+.exp-pro span {
+    color: rgba(180, 203, 223, 0.884);
+}
+
+.skills {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.skill {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #2a3d57;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.skillname {
+    margin-right: 10px;
+}
+
+#skilllevel span {
+    height: 100%;
+    display: block;
+    background-color: #4CAF50;
+    border-radius: 5px;
+    text-align: center;
+}
+
+#skilllevel {
+    background-color: #ddd;
+    height: 20px;
+    width: 300px;
+    position: relative;
+    border-radius: 5px;
+}
+
+.skilllevel1 span {
+    width: 80%;
+}
+
+.skilllevel2 span {
+    width: 60%;
+}
+
+.skilllevel3 span {
+    width: 80%;
+}
+
+.skilllevel4 span {
+    width: 60%;
+}
+
+.skilllevel5 span {
+    width: 50%;
+}
+
+.skilllevel6 span {
+    width: 70%;
+}
+
+#contact div {
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#contact h4 {
+    color: rgba(180, 203, 223, 0.884);
+}
+
+#contact div a {
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    background-color: #455a73;
+    padding: 10px;
+    border-radius: 10px;
+    transition: 0.3s;
+    width: 110px;
+}
+
+#contact div a:hover {
+    background-color: rgba(17, 210, 188, 0.792);
+    transition: 0.3s;
+    transform: scale(1.1);
+}
+
+.telecharger-cv {
+    background-color: #455a73;
+    padding: 10px;
+    border-radius: 10px;
+    transition: 0.3s;
+    width: 110px;
+    animation: float-sidebar   2s forwards;
+}
+.telecharger-cv a {
+    text-decoration: none;
+    color: white;
+    text-align: center;
+}
+.telecharger-cv:hover {
+    background-color: rgba(17, 210, 188, 0.792);
+    transform: translateX(12px);
+    transition: 0.3s;
+}
+.cv-desc p{
+    font-size: 18px;
+    text-align: justify;
+    color: rgba(180, 203, 223, 0.884);
+}

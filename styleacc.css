@@ -1,0 +1,372 @@
+@media only screen and (max-width: 770px) {
+    .bloc {
+        height: auto;
+        display: flex;
+        flex-direction: column;
+    }
+    .bloc div {
+        width: 100%;
+        height: 50%;
+    }
+}
+.accueil h1 {
+    font-size: large;
+    text-align: center;
+    font-family: monospace;
+    color: rgb(154, 145, 175);
+}
+
+.intro {
+    margin-top: 100px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #14162475;
+    box-shadow: 4px 7px 15px rgba(0, 0, 0, 0.765);
+    animation: float-section 1s forwards;
+}
+.imgprofil1 {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin: 10px;
+    background: linear-gradient(to right, rgb(6, 9, 24), rgb(1, 1, 5));
+    border-radius: 30% 70% 70% 30% / 30% 58% 42% 70%;
+    box-shadow: 4px 7px 15px rgba(0, 0, 0, 0.765);
+}
+.imgprofil1 img {
+    display: flex;
+    align-items: end;
+    border-radius: 30% 70% 70% 30% / 30% 58% 42% 70%;
+    width: 100%;
+    height: 100%;
+}
+#intro {
+    font-size: 15px;
+    margin: 12px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    border-radius: 12px;
+    word-spacing: 5px;
+    text-align: justify;
+}
+#intro h3 {
+    font-size: 50px;
+    line-height: 1.5;
+    font-weight: bold;
+}
+#intro p {
+    margin-bottom: 20px;
+}
+#intro a {
+    background-color: #06696ece;
+    text-decoration: none;
+    color: aliceblue;
+    padding: 10px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+#intro a:hover {
+    background-color: #2187d1;
+    transition: 0.3s;
+}
+#toggleButton {
+    cursor: pointer;
+    color: rgb(52, 149, 228);
+}
+
+#toggleButton:hover {
+    text-decoration: underline;
+}
+
+#hiddenText {
+    display: none;
+}
+.accueil h2 {
+    font-size: large;
+    text-align: center;
+    width: auto;
+    padding: 10px;
+    background-color: #292d30;
+    border-top-right-radius: 12px;
+    border-top-left-radius: 12px;
+    border-bottom: solid rgb(238, 233, 233) 1px;
+}
+
+.a-la-une {
+    position: relative;
+    width: auto;
+    margin-top: 200px;
+    scroll-behavior: smooth;
+    border-top-right-radius: 12px;
+    border-top-left-radius: 12px;
+    background-color: #14162475;
+    border-bottom: solid rgb(238, 233, 233) 1px;
+
+}
+
+.bloc-container {
+    position: relative;
+    gap: 10px;
+    padding: 10px;
+    width: auto;
+    display: flex;
+    overflow-x: hidden;
+    scroll-behavior: smooth; /* Pour un défilement doux */
+}
+.bloc {
+    display: flex;
+    text-decoration: none;
+    color: antiquewhite;
+    background-color: #1a1829;
+    border: solid rgb(77, 96, 103) 1px;
+    border-radius: 5px;
+    box-shadow: 4px 7px 10px rgba(0, 0, 0, 0.765);
+}
+.bloc img {
+    border-radius: 5px;
+    width: 100%;
+    height: 100%;
+
+}
+.bloc div {
+    width: 100%;
+}
+
+.Date {
+    color: #555;
+    font-style: italic;
+    margin: 7px;
+}
+.bloc p {
+    color: #dae6e7ce;
+    font-weight: bolder;
+    margin: 7px;
+    text-align: justify;
+    font-size: 25px;
+}
+.voir-plus {
+    margin: 7px;
+    display: block;
+    width: 20px;
+    text-align: end;
+    text-decoration: none;
+    color: #cdd5e5;
+    transition: 0.3s;
+}
+.voir-plus:hover {
+    transform: scale(1.1);
+    color: #1a57d2;
+    transition: 0.3s;    
+}
+.droite, .gauche {
+    display: flex;
+    position: absolute;
+    background-color: #36405fa1;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.droite:hover, .gauche:hover {
+    background-color: #2187d1;
+    transition: 0.3s;
+}
+.droite {
+    right: 10px;
+    top: 50%;
+}
+.gauche {
+    z-index: 1000;
+    top: 50%;
+    left: 10px;
+}
+
+
+/* avis des visiteurs */
+
+/* Bouton flottant */
+.floating-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: darkcyan;
+    transition: background-color 0.3s ease;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    transition: width 0.3s, padding-right 0.3s;
+    white-space: nowrap;
+}
+.floating-button .button-text {
+    opacity: 0;
+    margin-left: 10px;
+    transition: opacity 0.3s, transform 0.3s;
+    transform: translateX(20px);
+    font-size: 14px;
+    color: white;
+}
+.floating-button:hover {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #2187d1;
+    transform: scale(1.1);
+    width: auto;
+    padding-right: 20px;
+    border-radius: 20px;
+}
+.floating-button:hover .button-text {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.floating-button i {
+    font-size: 24px;
+    color: white;
+    margin-left: 7px;
+}
+
+
+/* Bloc de commentaire flottant */
+.review-block {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #36405f;
+    padding: 20px;
+    box-shadow: 4px 7px 15px rgba(0, 0, 0, 0.765);
+    display: none;
+    z-index: 1000;
+    width: 300px;
+    border-radius: 8px;
+}
+
+.visiteurname {
+    margin-bottom: 10px;
+}
+
+.visiteurname input {
+    width: 95%;
+    border-radius: 10px;
+    padding: 5px;
+    border: none;
+    height: 20px;
+}
+
+/* Étoiles */
+.stars {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+}
+
+.stars input {
+    display: none;
+}
+
+.stars label {
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.stars input:checked ~ label,
+.stars label:hover,
+.stars input[type="radio"]:checked ~ label ~ label,
+.stars label:hover ~ label {
+    color: orange;
+}
+
+.comment textarea {
+    width: 95%;
+    border-radius: 10px;
+    height: 50px;
+    padding: 5px;
+}
+
+#submit {
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 5px;
+    border: none;
+    color: white;
+    background-color: #2c78d4;
+}
+#submit:hover {
+    background-color: #2c4b8f;
+    transition: 0.3s;
+}
+
+/* Bouton de fermeture */
+.close-button {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 1px;
+    right: 10px;
+    color: white;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    padding: 10px;
+    background: none;
+}
+.close-button i {
+    transition: 0.3s;
+    font-size: 30px;
+    font-weight: bold;
+}
+.close-button i:hover {
+    color: red;
+    transition: 0.3s;
+}
+
+/* Affichage des avis */
+#reviews {
+    margin-top: 50px;
+}
+
+.review {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+    padding: 10px 0;
+    margin: 5px;
+}
+
+.review h4 {
+    margin: 0;
+}
+.review h4 small {
+    color: #555;
+}
+
+.review span {
+    margin: 5px 0;
+    font-size: 14px;
+    color: #5579b0;
+}
+.review span small {
+    color: orange;
+}
+.delete-review {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 20px;
+}
+.delete-review:hover {
+    color: red;
+}
+.no-reviews p {
+    color: #555;
+    text-align: center;
+    margin-top: 50px;
+}

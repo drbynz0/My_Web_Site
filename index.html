@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NIZAR SOILIHI</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" href="https://raw.githubusercontent.com/DrByNz/nizarsoilihi/main/NR0.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styleacc.css">
+</head>
+<body>   
+    <header id="entete1">
+        <a href="index.html"><img class="logo" src="https://raw.githubusercontent.com/DrByNz/nizarsoilihi/main/NR0.png" title="Logo"></a>
+        <div class="menu-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+        <nav id="entete2" class="entete2">
+            <a class="entete" href="index.html">Accueil</a>
+            <a class="entete" href="blog.html">Blog</a>
+            <main id="bloc-sous-menu">
+            <span class="entete" id="summary"><i class="fas fa-chevron-down"></i> Qui suis je?</span>
+                <div id="sous-menu">
+                    <a href="infopersonnel.html">A-propos de moi</a>
+                    <a href="cv.html">Curriculum Vitae</a>
+                </div>
+            </main>
+            <a class="entete" href="contact.html">Contact</a>
+        </nav>
+        <nav id="reseau-sociaux">
+            <ul class="social-icons">
+                <li><a class="icon-wap" href="https://api.whatsapp.com/send?phone=212642774321" title="Mon WhatsApp" target="_blank"><i class="fab fa-whatsapp"></i></a></li>
+                <li><a class="icon-fb" href="https://www.facebook.com/nizar.s00" title="Mon Facebook" target="_blank"><i class="fab fa-facebook"></i></a></li>
+                <li><a class="icon-insta" href="https://www.instagram.com/nizar.s00/" title="Mon Instagram" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                <li><a class="icon-teleg" href="https://t.me/drbynz" title="Mon Telegram" target="_blank"><i class="fab fa-telegram"></i></a></li>
+            </ul>   
+        </nav>   
+    </header>
+<div class="cover">
+    <P>Accueil</P> 
+</div>
+<main class="accueil">
+    <h1>Merci pour la visite</h1>
+    <nav class="intro" id="float">    
+        <div id="intro">
+            <h3>Bienvenue<br> Dans mon Site Web -<br> NIZAR SOILIHI</h3>
+            <p>
+           <!-- Bonjour et bienvenue sur mon site web personnel ! Je suis ravi de vous accueillir ici.-->
+            Ce site est une vitrine de mon travail, de mes passions et de mon parcours. Que vous soyez ici par curiosité, pour explorer mes réalisations ou simplement pour en apprendre un peu plus sur moi.<br/>
+            Je vous invite à parcourir ces pages et à découvrir ce que je peux vous offrir.
+            </p>
+            <span class="savoir-plus"><a href="infopersonnel.html">En savoir plus</a></span>
+        </div>
+        <div class="imgprofil1">
+            <img src="D:/Mes Documents/Audiobooks/Mon_site_Web/photo-acc.png" alt="Photo profil">
+        </div>
+    </nav>
+    <div class="a-la-une" id="float">
+        <h2>News</h2>
+        <div class="gauche">
+            <i class="fas fa-less-than"></i>
+            <i class="fas fa-less-than"></i>
+        </div>
+        <div class="bloc-container">
+            <div class="bloc">
+                <div class="img-bloc">
+                    <img src="https://raw.githubusercontent.com/DrByNz/nizarsoilihi/main/formulaire.PNG">
+                </div>
+                <div>
+                    <p>Nous avons mis une solution provisoire pour l'envoi de message dans la partie contact. Nous somme toujours sur le moyen de trouver une solution professionnelle.</p>
+                    <span class="Date">01/03/2024</span>
+                    <a href="#" class="voir-plus"><i class="fas fa-plus"></i></a>
+                </div>
+            </div>
+            <div class="bloc">
+                <div class="img-bloc">
+                    <img src="https://img.freepik.com/vecteurs-premium/icone-mise-jour-signe-mise-niveau-du-logiciel-symbole-progression-mise-jour-icones-telechargement-application-couleur-noire-signe-vectoriel_913857-21.jpg">
+                </div>
+                <div>
+                    <p>Des mises à jour seront toujours encours de développement pour une bonne amélioration de notre domaine. La partie Blog n'est pas encore disponible.</p>
+                    <span class="Date">21/02/2024</span>
+                    <a href="#" class="voir-plus"><i class="fas fa-plus"></i></a>
+                </div>
+            </div>
+            <div class="bloc">
+                <div class="img-bloc">
+                    <img src="https://blog.wanteddesign.fr/content/uploads/2021/05/development-webdesign-copie.jpg">
+                </div>
+                <div>
+                    <p>Ceci et notre premier pas dans le domaine du développement Web. n'hesitez pas de nous donner votre avis dans tout les cas nécessaires. Merci!<br></p>
+                    <span class="Date">19/02/2024</span>
+                    <a href="#" class="voir-plus"><i class="fas fa-plus"></i></a>
+                </div>
+            </div>     
+    </div>
+        <div class="droite">
+            <i class="fas fa-greater-than"></i>
+            <i class="fas fa-greater-than"></i>
+        </div>
+    </div>
+
+<!--avis des visiteurs-->
+<!-- Bouton flottant pour ouvrir le bloc -->
+<button id="openReviewBlock" class="floating-button" title="Laissez un avis">
+    <i class="fas fa-comment-dots"></i>
+    <span class="button-text">Laissez votre avis</span>
+</button>
+
+<!-- Bloc de commentaire flottant -->
+<div id="reviewBlock" class="review-block">
+    <h2>Laissez votre avis</h2>
+    <form id="reviewForm">
+        <div class="visiteurname">
+            <label for="name">Nom/Prénom</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+        <div>
+            <label for="rating">Évaluation:</label>
+            <div class="stars">
+                <input type="radio" id="star5" name="rating" value="5"><label for="star5">&#9733;</label>
+                <input type="radio" id="star4" name="rating" value="4"><label for="star4">&#9733;</label>
+                <input type="radio" id="star3" name="rating" value="3"><label for="star3">&#9733;</label>
+                <input type="radio" id="star2" name="rating" value="2"><label for="star2">&#9733;</label>
+                <input type="radio" id="star1" name="rating" value="1"><label for="star1">&#9733;</label>
+            </div>
+        </div>        
+        <div class="comment">
+            <label for="comment">Commentaire:</label>
+            <textarea id="comment" name="comment" required></textarea>
+        </div>
+        <button id="submit" type="submit">Soumettre</button>
+    </form>
+    <button id="closeReviewBlock" class="close-button">
+        <i class="fas fa-times"></i>
+    </button>
+</div>
+
+<!-- Section pour afficher les avis -->
+<div id="reviews">
+    <h2>Avis des visiteurs</h2>
+    <div id="reviewsList"></div>
+</div>
+
+</main>
+<script src="script.js"></script>
+<script src="scriptacc.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.13.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.13.0/firebase-database.js"></script>
+</body>
+<footer>
+    <div class="footer1">
+        <div class="info-legale">
+            <h2>Informations légales</h2>
+            <a href="infopersonnel.html">Qui suis-je?</a>
+            <a href="mentionslegales.html">Mentions légales</a>
+        </div>
+        <div class="lien-utile">
+            <h2>Liens utiles</h2>
+            <a href="https://fr.wikipedia.org/wiki/Comores_(pays)">Mon origine</a>
+            <a href="https://www.w3schools.com/">W3Schools</a>
+            <a href="https://www.openclassroom.com/">openclassroom</a>
+            <a href="https://estbm.ac.ma/web/pages/home.php">EST Béni Mellal</a>
+        </div>
+        <div class="coordonnee-footer">
+            <h2>Contact</h2>
+            <span class="phone"><i class="fas fa-phone"></i><strong class="coordonnee">+212 642 77 4321</strong></span><br/>
+            <span class="envelope"><i class="fas fa-envelope"></i><strong class="coordonnee">soilihinizar04@gmail.com</strong></span><br/>
+            <span class="map"><i class="fas fa-map-marker-alt"></i><strong class="coordonnee">Maroc / Ben Millal-Atlas</strong></span>
+        </div>
+        <div class="contact-footer">
+            <span><a href="contact.html">Contactez-moi<i class="fas fa-envelope"></i></a></span>
+            <img class="logo-footer" src="https://raw.githubusercontent.com/DrByNz/nizarsoilihi/main/NR0.png" title="Logo">
+            <nav class="contact-icon-res">
+                <a class="icon-fb" href="https://www.facebook.com/nizar.s00" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-facebook"></i>
+                </a>
+                <a class="icon-wap" href="https://api.whatsapp.com/send?phone=212642774321" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+                <a class="icon-insta" href="https://www.instagram.com/nizar.s00" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a class="icon-teleg" href="https://t.me/drbynz" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-telegram"></i>
+                </a>
+            </nav>
+        </div>
+    </div>
+    <center><P>Coder aujourd'hui, affronter les bugs, innover demain. Je construis mon avenir une ligne de code à la fois.</P></center>
+    <div class="footer2">
+    <p>&copy; 2024, MAROC | BENI MELLAL<br/>Ceci est un site personnel developpé par NIZAR SOILIIHI<br/>19/02/2024<br/>Tous droits réservés.</p>
+    </div>
+</footer>
+</html>
