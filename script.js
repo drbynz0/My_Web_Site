@@ -174,29 +174,25 @@ document.addEventListener("DOMContentLoaded", function() {
     const blocs = document.querySelectorAll('.bloc');
     let currentImg = 0;
     let timeout;
-    const DELAY = 3000; // Utilisation d'un délai plus long pour un défilement plus fluide
+    const DELAY = 3000; 
 
     function updateImg() {
         if (currentImg >= blocs.length) {
-            currentImg = 0; // Revient au début
+            currentImg = 0; 
         } else if(currentImg < 0){
-            currentImg = blocs.length; // Revient à la fin
+            currentImg = blocs.length; 
         }
 
-        // Défilement en fonction de la largeur de l'écran
         container.scrollLeft = currentImg * (window.innerWidth >= 770 ? 610 : (window.innerWidth - 8));
-        currentImg++; // Passe à l'image suivante
-
-        // Démarre l'animation en boucle
+        currentImg++; 
         timeout = setTimeout(updateImg, DELAY);
     }
 
-    // Initialisation du défilement automatique
     updateImg();
 
     // Gestion du clic gauche
     gauche.addEventListener('click', function() {
-        clearTimeout(timeout); // Arrête l'animation automatique temporairement
+        clearTimeout(timeout); 
         currentImg = (currentImg > 0) ? currentImg - 1 : blocs.length - 1;
         container.scrollLeft = currentImg * (window.innerWidth >= 770 ? 610 : (window.innerWidth - 8));
         timeout = setTimeout(updateImg, DELAY); // Relance l'animation automatique
