@@ -179,7 +179,6 @@ document.addEventListener("DOMContentLoaded", function() {
     function updateImg() {
         if (currentImg >= blocs.length) {
             currentImg = 0; // Revient au début
-            container.scrollLeft = 0;
         } else if(currentImg < 0){
             currentImg = blocs.length; // Revient à la fin
         }
