@@ -171,21 +171,45 @@ document.addEventListener("DOMContentLoaded", function() {
     const gauche = document.querySelector('.gauche');
     const droite = document.querySelector('.droite');
     const container = document.querySelector('.bloc-container');
+    const blocs = document.querySelectorAll('.bloc');
+    let currentImg = 0;
+    let timeout;
+    const DELAY = 3000; // Utilisation d'un délai plus long pour un défilement plus fluide
 
-    gauche.addEventListener('click', function() {
-        if (window.innerWidth >= 770) {
-            container.scrollLeft -= 610;
-        } else {
-            container.scrollLeft -= (window.innerWidth - 8);
+    function updateImg() {
+        if (currentImg >= blocs.length) {
+            currentImg = 0; // Revient au début
+            container.scrollLeft = 0;
+        } else if(currentImg < 0){
+            currentImg = blocs.length; // Revient à la fin
         }
+
+        // Défilement en fonction de la largeur de l'écran
+        container.scrollLeft = currentImg * (window.innerWidth >= 770 ? 610 : (window.innerWidth - 8));
+        currentImg++; // Passe à l'image suivante
+
+        // Démarre l'animation en boucle
+        timeout = setTimeout(updateImg, DELAY);
+    }
+
+    // Initialisation du défilement automatique
+    updateImg();
+
+    // Gestion du clic gauche
+    gauche.addEventListener('click', function() {
+        clearTimeout(timeout); // Arrête l'animation automatique temporairement
+        currentImg = (currentImg > 0) ? currentImg - 1 : blocs.length - 1;
+        container.scrollLeft = currentImg * (window.innerWidth >= 770 ? 610 : (window.innerWidth - 8));
+        timeout = setTimeout(updateImg, DELAY); // Relance l'animation automatique
     });
 
+    // Gestion du clic droite
     droite.addEventListener('click', function() {
-        if (window.innerWidth >= 770) {
-            container.scrollLeft += 610;
-        } else {
-            container.scrollLeft += (window.innerWidth - 8);
-        }
+        clearTimeout(timeout); // Arrête l'animation automatique temporairement
+        currentImg = (currentImg < blocs.length - 1) ? currentImg + 1 : 0;
+        container.scrollLeft = currentImg * (window.innerWidth >= 770 ? 610 : (window.innerWidth - 8));
+        timeout = setTimeout(updateImg, DELAY); // Relance l'animation automatique
     });
 });
+
 

@@ -112,10 +112,10 @@
     transition: 0.3s;
 }
 
-.sidebar ul li a:hover {
+.sidebar ul li a:hover, 
+.sidebar ul li a.activea {
     background-color: #455a73;
     transform: translateX(12px);
-    transition: 0.3s;
 }
 
 .content {
@@ -141,7 +141,7 @@
 }
 
 section.activecv {
-    display: block; /* Affiche la section active */
+    display: block;
 }
 
 .content section h1 {
@@ -255,8 +255,8 @@ summary:hover {
 }
 
 .ecole div {
-    background-size: cover;
-    background-position: 100%;
+    background-size: 120%;
+    background-position: center;
     padding-right: 150px;
     background-color: rgba(0, 0, 0, 0.5);
     background-blend-mode: overlay;
@@ -264,12 +264,12 @@ summary:hover {
     padding: 70px;
     width: auto;
     text-align: center;
-    
+    transition:background-size 0.5s;
 }
 
 .ecole div:hover {
-    transform: scale(1.1);
-    transition: 0.5s;
+    background-size: 150%;
+    /*transform: scale(1.1);*/
 }
 .ecole div a {
     color: #e1e7ef;
@@ -283,7 +283,7 @@ summary:hover {
 }
 
 .estbm {
-    background-image: url('https://estbm.ac.ma/web/img/bg-est.jpg');
+    background-image: url('https://estbm.ac.ma/new/img/about-5.jpg');
 }
 
 .fsterr {
@@ -291,7 +291,7 @@ summary:hover {
 }
 
 .ls {
-    background-image: url('https://raw.githubusercontent.com/DrByNz/nizarsoilihi/main/LSCHBR.jpg');
+    background-image: url('https://github.com/drbynz0/My_Web_Site/blob/master/LSCHBR.jpg?raw=true');
 }
 
 .exp-pro h4 {

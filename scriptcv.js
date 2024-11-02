@@ -6,6 +6,10 @@ document.addEventListener("DOMContentLoaded", function() {
             link.addEventListener("click", function(event) {
                 event.preventDefault();
 
+                links.forEach(l => l.classList.remove("activea"));
+            
+                this.classList.add("activea");
+
                 const target = this.getAttribute("data-target");
 
                 sections.forEach(section => {
@@ -16,6 +20,8 @@ document.addEventListener("DOMContentLoaded", function() {
                     }
                 });
             });
+           
+
         });
 
         if (sections.length > 0) {
@@ -27,6 +33,13 @@ document.addEventListener("DOMContentLoaded", function() {
             sidebar.style.width = "400px"
         }
 
+        function setActive(element) {
+            document.querySelectorAll('.sidebar ul li a').forEach((link) => {
+                link.classList.remove('activea');
+            });
+    
+            element.classList.add('activea');
+        }
         
 
         fleche.addEventListener("click", function(event) {

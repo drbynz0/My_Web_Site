@@ -167,10 +167,12 @@
     border-radius: 50%;
     cursor: pointer;
     transition: 0.3s;
+    opacity: 0.3;
 }
 .droite:hover, .gauche:hover {
     background-color: #2187d1;
     transition: 0.3s;
+    opacity: 1;
 }
 .droite {
     right: 10px;
