@@ -8,78 +8,74 @@ function adjustToggleVisibility() {
     }
 }
 
+var header = document.getElementById("barnav");
+const menuToggle = document.querySelector('.menu-toggle');
+const entete2 = document.querySelector('.entete2');
+const sousPage = document.querySelector('.sous-page');
+var sousMenu = document.getElementById("sous-menu");
+var flecheSousMenu = document.querySelector(".entete i");
+
+
+sousPage.addEventListener('mouseenter', () => {
+    entete2.classList.add('visible');
+    sousPage.classList.add('widthSp');
+    header.classList.add('bnoption');
+});
+
+sousPage.addEventListener('mouseleave', () => {
+    entete2.classList.remove('visible');
+    sousPage.classList.remove('widthSp');
+    header.classList.remove('bnoption');
+
+});
+
+
 var summary = document.getElementById("summary");
-summary.addEventListener("click", function() {
-    var header = document.getElementById("entete1");
-    var sousMenu = document.getElementById("sous-menu");
-    var flecheSousMenu = document.querySelector(".entete i");
+var blocSousMenu = document.getElementById('bloc-sous-menu');
+
+function sousMenuOptions(){
+        if (window.innerWidth <= 770) {
+            header.style.justifyContent = 'space-between';
+            entete2.style.marginLeft = '0px'
+            flecheSousMenu.style.transform = 'rotate(90deg)';
+            sousMenu.classList.remove('sousmenuHidden');
+        }else {
+            entete2.style.marginLeft = '100px'
+            header.style.justifyContent = 'normal';
+            flecheSousMenu.style.transform = 'rotate(0deg)';
+            sousMenu.classList.add('sousmenuHidden');
+        }
+    blocSousMenu.addEventListener("mouseenter", () => { 
+    blocSousMenu.classList.add('blocSousMenuOption');
+    summary.classList.add('summayOption');
     if (window.innerWidth <= 770) {
-        if (header.style.height === "360px" && (sousMenu.style.display === "block" || sousMenu.style.display === "") ) {
-            header.style.height = "300px";
-            sousMenu.style.display = "none"
-            flecheSousMenu.style.transform = "rotate(0deg)"
+        flecheSousMenu.style.transform = 'rotate(-90deg)';
+        sousMenu.classList.add('sousmenuOption');
+        sousMenu.classList.remove('sousmenuVisible');
         } else {
-            header.style.height = "360px";
-            sousMenu.style.display = "block"
-            flecheSousMenu.style.transform = "rotate(-180deg)"
-        }
-    } else {
-        if(sousMenu.style.display === "block") {
-            sousMenu.style.display = "none";
-            flecheSousMenu.style.transform = "rotate(0deg)"
+            flecheSousMenu.style.transform = 'rotate(-180deg)';
+            sousMenu.classList.add('sousmenuVisible');
+            sousMenu.classList.remove('sousmenuHidden');
+        }    
+    }
+    );
+    blocSousMenu.addEventListener("mouseleave", () => { 
+        blocSousMenu.classList.remove('blocSousMenuOption');
+        sousMenu.classList.remove('sousmenuOption'); 
+        summary.classList.remove('summaryOption');
+        if (window.innerWidth <= 770) {
+            flecheSousMenu.style.transform = 'rotate(90deg)';
+            sousMenu.classList.remove('sousmenuOption');
+
         } else {
-            sousMenu.style.display = "block";
-            flecheSousMenu.style.transform = "rotate(-180deg)"
+            flecheSousMenu.style.transform = 'rotate(0deg)';
+            sousMenu.classList.remove('sousmenuVisible');
+            sousMenu.classList.add('sousmenuHidden');
         }
-    }
-});
-
-/* document.addEventListener('click', function(event) {
-    var header = document.getElementById("entete1");
-    var flecheSousMenu = document.querySelector(".entete i");
-    var blocSousMenu = document.getElementById("bloc-sous-menu");
-    var sousMenu = document.getElementById("sous-menu");
-    if (!blocSousMenu.contains(event.target)) {
-        sousMenu.style.display = "none";
-        flecheSousMenu.style.transform = "rotate(0deg)";
-    }
-    if (window.innerWidth <= 770 ) {
-        header.style.height = "300px";
-    }
-});
-*/
-function toggleMenu() {
-    var toggle = document.querySelector('.menu-toggle');
-    var menu = document.querySelector('.entete2');
-    var menuIsVisible = menu.style.display === 'flex';
-    var header = document.getElementById("entete1");
-
-    menu.style.display = menuIsVisible ? 'none' : 'flex';
-    if (menuIsVisible) {
-        document.removeEventListener('click', hideMenu);
-        header.style.height = "60px";
-        toggle.style.transform = "rotate(0deg)";
-    } else {
-        document.addEventListener('click', hideMenu);
-        header.style.height = "300px";
-        toggle.style.transform = "rotate(90deg)";
-    }
+        }
+    );
 }
-
-function hideMenu(event) {
-    var toggle = document.querySelector('.menu-toggle');
-    var header = document.getElementById("entete1");
-    var menu = document.querySelector('.entete2');
-    if (!menu.contains(event.target) && !toggle.contains(event.target)) {
-        toggle.style.transform = "rotate(0deg)";
-        menu.style.display = 'none';
-        header.style.height = "60px";
-        document.removeEventListener('click', hideMenu);
-    }
-}
-
 document.querySelector('.menu-toggle').addEventListener('click', function(event) {
-    var header = document.getElementById("entete1");
     var sousMenu = document.getElementById("sous-menu");
     event.stopPropagation();
     toggleMenu();
@@ -90,45 +86,60 @@ document.querySelector('.menu-toggle').addEventListener('click', function(event)
 
 // Masquer ou afficher le menu en fonction de la largeur de la fenêtre
 window.addEventListener('resize', function() {
-    var menu = document.querySelector('.entete2');
+    var barnav1 = document.querySelector('.barnav1');
     var bloc = document.querySelectorAll('.bloc');
+    sousMenuOptions();
     adjustToggleVisibility();
 
-    if (window.innerWidth > 768) {
-        menu.style.display = 'flex';
+    if (window.innerWidth > 770) {
+        header.style.alignItems = 'center';
+        barnav1.style.display = 'flex';
+        sousMenu.classList.add('sousmenuHidden');
         for(let i = 0; i <= bloc.length; i++){
             bloc[i].style.minWidth = '600px'
             bloc[i].style.height = '300px'
             }
     } else {
-        menu.style.display = 'none';
+        header.style.alignItems = 'normal';
+        barnav1.style.display = 'block';
         for(let i = 0; i <= bloc.length; i++){
             bloc[i].style.minWidth = '100%'
             bloc[i].style.height = 'auto'
             }
+            sousMenu.classList.remove('sousmenuHidden');
+
     }
 });
 
 // Initialisation pour s'assurer que les états sont corrects lors du chargement de la page
 document.addEventListener('DOMContentLoaded', function() {
-    var menu = document.querySelector('.entete2');
+   var barnav1 = document.querySelector('.barnav1');
     var bloc = document.querySelectorAll('.bloc');
     var blocWidth;
     adjustToggleVisibility();
+    sousMenuOptions();
 
     if (window.innerWidth > 770) {
+        header.style.alignItems = 'center';
+        header.style.display = 'flex';
+        barnav1.style.display = 'flex';
         menu.style.display = 'flex';
         for(let i = 0; i <= bloc.length; i++){
         blocWidth = bloc[i].style.minWidth = '600px'
         bloc[i].style.height = '300px'
+        sousMenu.classList.add('sousmenuHidden');
         }
     } else {
-        menu.style.display = 'none';
+        header.style.alignItems = 'normal';
+        header.style.display = 'flex';
+        barnav1.style.display = 'block';
         for(let i = 0; i <= bloc.length; i++){
             blocWidth = bloc[i].style.minWidth = '100%'
             bloc[i].style.height = 'auto'
             }
-            }
+            sousMenu.classList.remove('sousmenuHidden');
+
+        }
 });
 
 // Script du blog
@@ -167,44 +178,51 @@ function authershort() {
 }
 
 // défilement des blocs
-document.addEventListener("DOMContentLoaded", function() {
+//document.addEventListener("DOMContentLoaded", function() {
     const gauche = document.querySelector('.gauche');
     const droite = document.querySelector('.droite');
-    const container = document.querySelector('.bloc-container');
+    const blocContainer = document.querySelector('.bloc-container');
     const blocs = document.querySelectorAll('.bloc');
     let currentImg = 0;
     let timeout;
     const DELAY = 3000; 
+    const blocWidth = blocs[currentImg].offsetWidth;
 
     function updateImg() {
+
+
         if (currentImg >= blocs.length) {
             currentImg = 0; 
         } else if(currentImg < 0){
             currentImg = blocs.length; 
         }
 
-        container.scrollLeft = currentImg * (window.innerWidth >= 770 ? 610 : (window.innerWidth - 8));
-        currentImg++; 
-        timeout = setTimeout(updateImg, DELAY);
+        if(window.innerWidth >= 770) {
+        blocContainer.style.transform = `translateX(-${currentImg * 50}%)`;
+        } else {
+            blocContainer.style.transform = `translateX(-${currentImg * 100}%)`;
+            }
     }
 
     updateImg();
 
-    // Gestion du clic gauche
+
     gauche.addEventListener('click', function() {
-        clearTimeout(timeout); 
-        currentImg = (currentImg > 0) ? currentImg - 1 : blocs.length - 1;
-        container.scrollLeft = currentImg * (window.innerWidth >= 770 ? 610 : (window.innerWidth - 8));
-        timeout = setTimeout(updateImg, DELAY); // Relance l'animation automatique
+        currentImg--;
+        updateImg();
     });
 
-    // Gestion du clic droite
+    // Bouton droite pour avancer d'une image
     droite.addEventListener('click', function() {
-        clearTimeout(timeout); // Arrête l'animation automatique temporairement
-        currentImg = (currentImg < blocs.length - 1) ? currentImg + 1 : 0;
-        container.scrollLeft = currentImg * (window.innerWidth >= 770 ? 610 : (window.innerWidth - 8));
-        timeout = setTimeout(updateImg, DELAY); // Relance l'animation automatique
+        currentImg++;
+        updateImg();
     });
-});
+
+    // Déclenche l'animation automatique
+    setInterval(() => {
+        currentImg++;
+        updateImg();
+    }, 3000); 
+    
 
 

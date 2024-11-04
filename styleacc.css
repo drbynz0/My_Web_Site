@@ -1,5 +1,6 @@
 @media only screen and (max-width: 770px) {
     .bloc {
+        width: 50%;
         height: auto;
         display: flex;
         flex-direction: column;
@@ -105,17 +106,22 @@
 
 }
 
-.bloc-container {
+.container {
+    width: 100%;
     position: relative;
-    gap: 10px;
     padding: 10px;
     width: auto;
-    display: flex;
     overflow-x: hidden;
-    scroll-behavior: smooth; /* Pour un défilement doux */
-    transition: scroll-left 0.5s ease-in-out;
+    scroll-behavior: smooth;
+}
+
+.bloc-container {
+    display: flex;
+    gap: 10px;
+    transition: transform 0.5s ease;
 }
 .bloc {
+    min-width: 100%;
     display: flex;
     text-decoration: none;
     color: antiquewhite;
