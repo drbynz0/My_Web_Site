@@ -1,11 +1,12 @@
 // Affichage du bloc d'avis lors du clic sur le bouton flottant
+reviewBlock = document.querySelector(".review-block");
 document.getElementById("openReviewBlock").addEventListener("click", function() {
-    document.getElementById("reviewBlock").style.display = "block";
+    reviewBlock.classList.add('rbactive');
 });
 
 // Fermeture du bloc d'avis lors du clic sur le bouton de fermeture
 document.getElementById("closeReviewBlock").addEventListener("click", function() {
-    document.getElementById("reviewBlock").style.display = "none";
+    reviewBlock.classList.remove('rbactive');
 });
 
 // Configuration Firebase

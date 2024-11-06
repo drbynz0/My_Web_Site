@@ -125,8 +125,8 @@ document.addEventListener('DOMContentLoaded', function() {
         barnav1.style.display = 'flex';
         menu.style.display = 'flex';
         for(let i = 0; i <= bloc.length; i++){
-        blocWidth = bloc[i].style.minWidth = '600px'
-        bloc[i].style.height = '300px'
+        bloc[i].style.minWidth = '600px'
+        bloc[i].style.height = '300px';
         sousMenu.classList.add('sousmenuHidden');
         }
     } else {
@@ -134,8 +134,8 @@ document.addEventListener('DOMContentLoaded', function() {
         header.style.display = 'flex';
         barnav1.style.display = 'block';
         for(let i = 0; i <= bloc.length; i++){
-            blocWidth = bloc[i].style.minWidth = '100%'
-            bloc[i].style.height = 'auto'
+            bloc[i].style.minWidth = '100%';
+            bloc[i].style.height = 'auto';
             }
             sousMenu.classList.remove('sousmenuHidden');
 
@@ -198,9 +198,9 @@ function authershort() {
         }
 
         if(window.innerWidth >= 770) {
-        blocContainer.style.transform = `translateX(-${currentImg * 50}%)`;
+        blocContainer.style.transform = `translateX(-${currentImg * 60}%)`;
         } else {
-            blocContainer.style.transform = `translateX(-${currentImg * 100}%)`;
+            blocContainer.style.transform = `translateX(-${currentImg * (window.innerWidth - 20)}px)`;
             }
     }
 
@@ -222,7 +222,7 @@ function authershort() {
     setInterval(() => {
         currentImg++;
         updateImg();
-    }, 3000); 
+    }, 4000); 
     
 
 
