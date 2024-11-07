@@ -15,7 +15,7 @@
         align-items: center;
     }
 
-    .sous-page:hover .menu-toggle {
+    .menu-toggle.menuToggleRotate {
         transform: rotate(90deg);
       }
       .sous-page {
@@ -32,7 +32,6 @@
         padding: 10px;
         padding-bottom: 0%;
         display: block;
-        align-items: start;
         flex-direction: column;
         justify-content: end;
         transform: translateX(100%);

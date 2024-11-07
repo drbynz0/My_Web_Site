@@ -15,19 +15,33 @@ const sousPage = document.querySelector('.sous-page');
 var sousMenu = document.getElementById("sous-menu");
 var flecheSousMenu = document.querySelector(".entete i");
 
-
-sousPage.addEventListener('mouseenter', () => {
+function sousPageVisible(){
     entete2.classList.add('visible');
     sousPage.classList.add('widthSp');
     header.classList.add('bnoption');
-});
+    menuToggle.classList.add('menuToggleRotate');
+}
 
-sousPage.addEventListener('mouseleave', () => {
+function sousPageHidden(){
     entete2.classList.remove('visible');
     sousPage.classList.remove('widthSp');
     header.classList.remove('bnoption');
-
+    menuToggle.classList.remove('menuToggleRotate');
+}
+sousPage.addEventListener('mouseenter', () => {
+    sousPageVisible();
 });
+
+sousPage.addEventListener('mouseleave', () => {
+    sousPageHidden();
+});
+menuToggle.addEventListener('click', ()=> {
+    if(header.classList.contains('bnoption')){
+        sousPageHidden();
+    } else {
+        sousPageVisible();
+    }
+} );
 
 
 var summary = document.getElementById("summary");
