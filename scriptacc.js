@@ -106,3 +106,5 @@ document.getElementById("reviewsList").addEventListener("click", function(event)
 
 // Charger et afficher les avis au démarrage
 document.addEventListener("DOMContentLoaded", displayReviews);
+
+

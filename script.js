@@ -1,15 +1,20 @@
-
 function adjustToggleVisibility() {
     var toggle = document.querySelector('.menu-toggle');
+    const btnCloseMenu = document.querySelector('.btn-close-menu');
     if (window.innerWidth <= 770) {
         toggle.style.display = "block";
+        btnCloseMenu.style.display = "block"
     } else {
         toggle.style.display = "none";
+        btnCloseMenu.style.display = "none"
     }
 }
 
+
+
 var header = document.getElementById("barnav");
 const menuToggle = document.querySelector('.menu-toggle');
+const btnCloseMenu = document.querySelector('.btn-close-menu');
 const entete2 = document.querySelector('.entete2');
 const sousPage = document.querySelector('.sous-page');
 var sousMenu = document.getElementById("sous-menu");
@@ -19,14 +24,16 @@ function sousPageVisible(){
     entete2.classList.add('visible');
     sousPage.classList.add('widthSp');
     header.classList.add('bnoption');
-    menuToggle.classList.add('menuToggleRotate');
+    menuToggle.classList.add('menuToggleHidden');
+    btnCloseMenu.classList.add('btnCloseMenuVisible');
 }
 
 function sousPageHidden(){
     entete2.classList.remove('visible');
     sousPage.classList.remove('widthSp');
     header.classList.remove('bnoption');
-    menuToggle.classList.remove('menuToggleRotate');
+    menuToggle.classList.remove('menuToggleHidden');
+    btnCloseMenu.classList.remove('btnCloseMenuVisible');
 }
 
 function sousPageOptions() {
@@ -45,6 +52,10 @@ menuToggle.addEventListener('click', ()=> {
         sousPageVisible();
     }
 } );
+
+btnCloseMenu.addEventListener('click', ()=> {
+    sousPageHidden();
+});
 };
 
 function sousMenuVisible(){
@@ -91,12 +102,17 @@ function sousMenuOptions(){
             flecheSousMenu.style.transform = 'rotate(0deg)';
             sousMenu.classList.add('sousmenuHidden');
         }
-    blocSousMenu.addEventListener("mouseenter", () => { 
+
+    blocSousMenu.addEventListener("mouseleave", () => { 
+        sousMenuHidden();
+    }
+    );
+    blocSousMenu.addEventListener("click", () => { 
+        if(sousMenu.classList.contains('sousmenuOption')){
+            sousMenuHidden();
+        } else {
             sousMenuVisible();
         }
-    );
-    blocSousMenu.addEventListener("mouseleave", () => { 
-            sousMenuHidden();
         }
     );
 }
@@ -204,52 +220,64 @@ function authershort() {
     }
 }
 
-// défilement des blocs
-//document.addEventListener("DOMContentLoaded", function() {
+// Défilement des blocs
+document.addEventListener("DOMContentLoaded", function() {
     const gauche = document.querySelector('.gauche');
     const droite = document.querySelector('.droite');
-    const blocContainer = document.querySelector('.bloc-container');
+    const blocContainer = document.querySelector('.blocs-news-container');
     const blocs = document.querySelectorAll('.bloc');
-    let currentImg = 0;
-    let timeout;
-    const DELAY = 3000; 
-    const blocWidth = blocs[currentImg].offsetWidth;
 
-    function updateImg() {
+    // Calculer la largeur d'un bloc une fois, après le chargement de la page
+    const blocWidth = 370;
+    const totalWidth = blocWidth * blocs.length;
+    let currentScrollPosition = 0;
+    let scrollDirection = 1; // 1 pour aller vers la droite, -1 pour aller vers la gauche
 
-
-        if (currentImg >= blocs.length) {
-            currentImg = 0; 
-        } else if(currentImg < 0){
-            currentImg = blocs.length; 
+    // Fonction pour faire défiler manuellement vers la gauche
+    function scrollLeft() {
+        currentScrollPosition -= blocWidth;
+        if (currentScrollPosition < 0) {
+            currentScrollPosition = 0; // Empêche de dépasser le bord gauche
         }
-
-        if(window.innerWidth >= 770) {
-        blocContainer.style.transform = `translateX(-${currentImg * 60}%)`;
-        } else {
-            blocContainer.style.transform = `translateX(-${currentImg * (window.innerWidth - 20)}px)`;
-            }
+        blocContainer.scrollLeft = currentScrollPosition;
     }
 
-    updateImg();
+    // Fonction pour faire défiler manuellement vers la droite
+    function scrollRight() {
+        currentScrollPosition += blocWidth;
+        if (currentScrollPosition > totalWidth - blocContainer.clientWidth) {
+            currentScrollPosition = totalWidth - blocContainer.clientWidth; // Empêche de dépasser le bord droit
+        }
+        blocContainer.scrollLeft = currentScrollPosition;
+    }
+
+    // Ajoute des écouteurs d'événements aux boutons
+    gauche.addEventListener('click', scrollLeft);
+    droite.addEventListener('click', scrollRight);
+
+    // Fonction de défilement automatique
+    function autoScroll() {
+        currentScrollPosition += blocWidth * scrollDirection;
+
+        // Vérifie si on atteint le bord droit
+        if (currentScrollPosition >= totalWidth - blocContainer.clientWidth) {
+            scrollDirection = -1; // Inverse la direction pour aller vers la gauche
+            currentScrollPosition = totalWidth - blocContainer.clientWidth;
+        }
+        // Vérifie si on atteint le bord gauche
+        else if (currentScrollPosition <= 0) {
+            scrollDirection = 1; // Inverse la direction pour aller vers la droite
+            currentScrollPosition = 0;
+        }
+
+        blocContainer.scrollLeft = currentScrollPosition;
+    }
+
+    // Défilement automatique toutes les 3 secondes
+    setInterval(autoScroll, 3000);
+});
 
 
-    gauche.addEventListener('click', function() {
-        currentImg--;
-        updateImg();
-    });
-
-    // Bouton droite pour avancer d'une image
-    droite.addEventListener('click', function() {
-        currentImg++;
-        updateImg();
-    });
-
-    // Déclenche l'animation automatique
-    setInterval(() => {
-        currentImg++;
-        updateImg();
-    }, 4000); 
     
 
 
