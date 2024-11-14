@@ -161,12 +161,27 @@
 .bloc i {
     opacity: 1;
     transition: opacity 0.5s ease;
-    transform: rotate(90deg);
     font-size: 30px;
-    color: #6ba6ea;
+    color: darkcyan;
     position: absolute;
     top: -9%;
     left: 50%;
+    animation: shake-up-down 3s infinite; 
+}
+
+@keyframes shake-up-down {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    25% {
+        transform: translateY(-5px);
+    }
+    50% {
+        transform: translateY(5px);
+    }
+    75% {
+        transform: translateY(-5px);
+    }
 }
 #bloc1 {
     background-image: url('https://img.freepik.com/vecteurs-premium/icone-mise-jour-signe-mise-niveau-du-logiciel-symbole-progression-mise-jour-icones-telechargement-application-couleur-noire-signe-vectoriel_913857-21.jpg') ;
@@ -188,7 +203,7 @@
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
     position: relative;
-    background-color: #35405e98;
+    background-color: rgba(0, 52, 52, 0.642);
     backdrop-filter: blur(25px);
     height: 150px;
     padding: 5px;
@@ -205,9 +220,9 @@
 }
 
 .Date {
-    color: #555;
+    color: #84e9e2;
     font-style: italic;
-    margin: 7px;
+    font-weight: bold;
 }
 .bloc p {
     color: #dae6e7ce;
