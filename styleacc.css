@@ -1,22 +1,11 @@
 @media only screen and (max-width: 770px) {
-    .bloc {
-        width: 50%;
-        height: auto;
-        display: flex;
-        flex-direction: column;
-    }
-    .bloc div {
-        width: 100%;
-        height: 50%;
-    }
-    .a-la-une {
-        flex-direction: column;
-    }
+
     .desc {
         flex-direction: column-reverse;
         align-items: center;
         text-align: justify;
     }
+
 
     #intro {
         width: 100%;
@@ -107,7 +96,8 @@
 
 .a-la-une {
     display: flex;
-    gap: 20px;
+    flex-direction: column;
+    gap: 40px;
     position: relative;
     width: auto;
     margin-top: 100px;
@@ -117,19 +107,21 @@
 .a-la-une h2 {
     margin: 0%;
     font-size: large;
-    width: auto;
     padding-top: 10px;
     padding-left: 10px;
     background-color: #292d30;
-    border-bottom: solid rgb(238, 233, 233) 1px;
+    border-bottom: solid rgb(96, 104, 120) 1px;
+    
 }
 
 .news {
-    height: 100%;
+    width: 100%;
+    background-color: #3f425e81;
+    flex-grow: 2;
 }
+
 .news-container {
-    margin: 0%;
-    background-color: #2a2d4875;
+    background-color: #2e314f75;
     position: relative;
     width: auto;
 }
@@ -143,26 +135,73 @@
     transition: transform 0.5s ease;
 }
 .bloc {
-    min-width: 50%;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: end;
+    min-height: 300px;
+    min-width: 35%;
     text-decoration: none;
     color: antiquewhite;
-    background-color: #1a1829;
-    border: solid rgb(77, 96, 103) 1px;
+    background-size: 120%;
+    transition: 0.5s;
+    background-position: center;
     border-radius: 5px;
+    box-shadow: 4px 7px 15px rgba(0, 0, 0, 0.765);
 }
-.bloc img {
-    border-radius: 5px;
-    width: 100%;
-    min-height: 350px;
 
+.bloc:hover {
+    background-blend-mode: normal;
+    background-size: 160%;
+    transition: 0.5s; 
 }
+.bloc:hover i {
+    opacity: 0;
+}
+.bloc i {
+    opacity: 1;
+    transition: opacity 0.5s ease;
+    transform: rotate(90deg);
+    font-size: 30px;
+    color: #6ba6ea;
+    position: absolute;
+    top: -9%;
+    left: 50%;
+}
+#bloc1 {
+    background-image: url('https://img.freepik.com/vecteurs-premium/icone-mise-jour-signe-mise-niveau-du-logiciel-symbole-progression-mise-jour-icones-telechargement-application-couleur-noire-signe-vectoriel_913857-21.jpg') ;
+}
+#bloc2 {
+    background-image: url('https://github.com/drbynz0/My_Web_Site/blob/master/formulaire.PNG');
+}
+#bloc3 {
+    background-image: url('https://blog.wanteddesign.fr/content/uploads/2021/05/development-webdesign-copie.jpg');
+}
+#bloc4 {
+    background-image: url('https://blog.wanteddesign.fr/content/uploads/2021/05/development-webdesign-copie.jpg');
+}
+
 .bloc div {
-    width: 100%;
+    position: absolute;
+    bottom: -40%;
+    transition: bottom 0.5s ease;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    position: relative;
+    background-color: #35405e98;
+    backdrop-filter: blur(25px);
+    height: 150px;
+    padding: 5px;
+}
+
+.bloc:hover div {
+    bottom: 0; /* Affiche le contenu lors du survol */
 }
 
 #reviews {
     width: 100%;
     height: 100%;
+    background-color: #1a57d2;
 }
 
 .Date {
@@ -172,10 +211,6 @@
 }
 .bloc p {
     color: #dae6e7ce;
-    font-weight: bolder;
-    margin: 7px;
-    text-align: justify;
-    font-size: 25px;
 }
 .voir-plus {
     margin: 7px;
@@ -192,6 +227,7 @@
     transition: 0.3s;    
 }
 .droite, .gauche {
+    z-index: 1000;
     display: flex;
     position: absolute;
     background-color: #36405fa1;

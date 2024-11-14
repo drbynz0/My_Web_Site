@@ -6,7 +6,7 @@ function adjustToggleVisibility() {
         btnCloseMenu.style.display = "block"
     } else {
         toggle.style.display = "none";
-        btnCloseMenu.style.display = "none"
+        btnCloseMenu.style.display = "none";
     }
 }
 
@@ -93,7 +93,7 @@ var blocSousMenu = document.getElementById('bloc-sous-menu');
 function sousMenuOptions(){
         if (window.innerWidth <= 770) {
             header.style.justifyContent = 'space-between';
-            entete2.style.marginLeft = '0px'
+            entete2.style.marginLeft = '0px';
             flecheSousMenu.style.transform = 'rotate(90deg)';
             sousMenu.classList.remove('sousmenuHidden');
         }else {
@@ -153,11 +153,10 @@ window.addEventListener('resize', function() {
     }
 });
 
+var bloc = document.querySelectorAll('.bloc');
 // Initialisation pour s'assurer que les états sont corrects lors du chargement de la page
 document.addEventListener('DOMContentLoaded', function() {
    var barnav1 = document.querySelector('.barnav1');
-    var bloc = document.querySelectorAll('.bloc');
-    var blocWidth;
     adjustToggleVisibility();
     sousMenuOptions();
     sousPageOptions();
@@ -168,7 +167,7 @@ document.addEventListener('DOMContentLoaded', function() {
         barnav1.style.display = 'flex';
         menu.style.display = 'flex';
         for(let i = 0; i <= bloc.length; i++){
-        bloc[i].style.minWidth = '600px'
+        bloc[i].style.minWidth = '35%'
         bloc[i].style.height = '300px';
         sousMenu.classList.add('sousmenuHidden');
         }
@@ -220,61 +219,31 @@ function authershort() {
     }
 }
 
-// Défilement des blocs
+//défilement des blocs
 document.addEventListener("DOMContentLoaded", function() {
     const gauche = document.querySelector('.gauche');
     const droite = document.querySelector('.droite');
     const blocContainer = document.querySelector('.blocs-news-container');
-    const blocs = document.querySelectorAll('.bloc');
 
-    // Calculer la largeur d'un bloc une fois, après le chargement de la page
-    const blocWidth = 370;
-    const totalWidth = blocWidth * blocs.length;
-    let currentScrollPosition = 0;
-    let scrollDirection = 1; // 1 pour aller vers la droite, -1 pour aller vers la gauche
 
-    // Fonction pour faire défiler manuellement vers la gauche
     function scrollLeft() {
-        currentScrollPosition -= blocWidth;
-        if (currentScrollPosition < 0) {
-            currentScrollPosition = 0; // Empêche de dépasser le bord gauche
+            if(window.innerWidth <= 770) {
+            blocContainer.scrollLeft -= (window.innerWidth - 25);
+        } else {
+            blocContainer.scrollLeft -= (bloc[0].offsetWith + 15);
         }
-        blocContainer.scrollLeft = currentScrollPosition;
     }
 
-    // Fonction pour faire défiler manuellement vers la droite
     function scrollRight() {
-        currentScrollPosition += blocWidth;
-        if (currentScrollPosition > totalWidth - blocContainer.clientWidth) {
-            currentScrollPosition = totalWidth - blocContainer.clientWidth; // Empêche de dépasser le bord droit
+        if(window.innerWidth <= 770) {
+            blocContainer.scrollLeft += (window.innerWidth - 25);
+        } else {
+            blocContainer.scrollLeft += (bloc[0].offsetWidth + 15);
         }
-        blocContainer.scrollLeft = currentScrollPosition;
     }
 
-    // Ajoute des écouteurs d'événements aux boutons
     gauche.addEventListener('click', scrollLeft);
     droite.addEventListener('click', scrollRight);
-
-    // Fonction de défilement automatique
-    function autoScroll() {
-        currentScrollPosition += blocWidth * scrollDirection;
-
-        // Vérifie si on atteint le bord droit
-        if (currentScrollPosition >= totalWidth - blocContainer.clientWidth) {
-            scrollDirection = -1; // Inverse la direction pour aller vers la gauche
-            currentScrollPosition = totalWidth - blocContainer.clientWidth;
-        }
-        // Vérifie si on atteint le bord gauche
-        else if (currentScrollPosition <= 0) {
-            scrollDirection = 1; // Inverse la direction pour aller vers la droite
-            currentScrollPosition = 0;
-        }
-
-        blocContainer.scrollLeft = currentScrollPosition;
-    }
-
-    // Défilement automatique toutes les 3 secondes
-    setInterval(autoScroll, 3000);
 });
 
 
