@@ -30,8 +30,8 @@ section {
     flex-direction: column;
     gap: 30px;
 }
-section main {
 
+section main {
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     background-color: #172040;
@@ -41,8 +41,8 @@ section main {
     padding-left: 5px;
     padding-right: 5px;
     border-bottom: solid 1px;
-    height: auto;
 }
+
 section span i {
     position: absolute;
     font-size: 30px;
@@ -50,23 +50,31 @@ section span i {
     right: 7px;
     cursor: pointer;
 }
-section div i:hover {
+section span i:hover {
     color: rgb(9, 174, 224);
+
 }
-.diplome, .experience, .competence {
+.section-bloc {
     position: relative;
     background-color: #0a0a17c1;
     margin-left: 10%;
     margin-right: 10%;
     border-radius: 10px;
     box-shadow: 4px 7px 15px rgba(0, 0, 0, 0.765);
+    overflow: hidden;
+    transition: height 0.3s;
 }
+
 .sous-section {
     display: flex;
+    opacity: 0;
     justify-content: center;
     align-items: center;
     margin: 10px;
-    animation: float-section 1s forwards;
+    transition: opacity 0.3s;
+}
+.sous-section.ssactive {
+    opacity: 1;
 }
 
 section h4 {

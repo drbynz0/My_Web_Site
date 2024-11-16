@@ -366,7 +366,7 @@
 }
 
 .visiteurname input:focus {
-    border-color: #4A90E2;
+    border-color: rgba(17, 210, 188, 0.792);
     outline: none;
 }
 .visiteurname input:focus + label {
@@ -423,7 +423,7 @@
     font-family: sans-serif;
 }
 .comment textarea:focus {
-    border-color: #4A90E2;
+    border-color: rgba(17, 210, 188, 0.792);
     outline: none;
 }
 .comment textarea:focus + label {
@@ -438,11 +438,11 @@
     margin-left: 210px;
     border: none;
     color: white;
-    background-color: #475a71;
+    background-color: #455a73;
     transition: 0.3s;
 }
 #submit:hover {
-    background-color: #557ac8;
+    background-color: rgba(17, 210, 188, 0.792);
 }
 
 /* Bouton de fermeture */
