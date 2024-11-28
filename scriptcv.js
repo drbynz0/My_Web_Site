@@ -29,9 +29,23 @@ document.addEventListener("DOMContentLoaded", function() {
         }
         var fleche = document.querySelector(".flechecv");
         var sidebar = document.querySelector(".sidebar");
-        if (window.innerWidth >= 770) {
-            sidebar.style.width = "400px"
+
+        function init(){
+            if (window.innerWidth > 770) {
+                fleche.style.transform = 'rotate(180deg)';
+                sidebar.style.width = "400px"
+            } else {
+                sidebar.style.width = "100%"
+                fleche.style.transform = 'rotate(90deg)';
+                sidebar.style.height = "80px"
+            }
         }
+        init();
+        window.addEventListener('resize', function() {
+           init();      
+         });
+
+       
 
         function setActive(element) {
             document.querySelectorAll('.sidebar ul li a').forEach((link) => {
@@ -46,51 +60,42 @@ document.addEventListener("DOMContentLoaded", function() {
 
             event.preventDefault();
             function hideSidebarElements() {
-                fleche.style.transform = "rotate(90deg)";
-                sidebarmobile1.style.display = "none";
-                telechargercv.style.display = "none";
                 sidebar.style.height = "80px";
             }
     
             function showSidebarElements() {
-                fleche.style.transform = "rotate(-90deg)";
-                sidebarmobile1.style.display = "block";
-                telechargercv.style.display = "block";
                 sidebar.style.height = "550px";
             }
 
-            var sidebar1 = document.querySelector(".sidebar span");
-            var sidebar2 = document.querySelectorAll(".sidebar ul span");
-            var sidebar3 = document.querySelector(".telecharger-cv a span");
+            var sidebar1 = document.querySelector(".sidebar h2");
+            var sidebar2 = document.querySelectorAll(".sidebar ul li a");
             var telechargercv = document.querySelector(".telecharger-cv");
 
-        if (window.innerWidth >= 770) {
-            if (sidebar1.style.display === "none") {
-               sidebar1.style.display = "inline";
-               sidebar3.style.display = "inline";
-
+        if (window.innerWidth > 770) {
+            if (sidebar.style.width != "400px") {
+                sidebar1.style.width = '200px';
                for(let i = 0;i < sidebar2.length; i++){
-               sidebar2[i].style.display = "inline";
+               sidebar2[i].style.width = '100%'
                }
                fleche.style.transform = "rotate(180deg)";
                sidebar.style.width = "400px"
                telechargercv.style.width = "110px"
                 } else {
-                sidebar1.style.display = "none";
-                sidebar3.style.display = "none";
+                sidebar1.style.width = '20px';
                 for(let i = 0;i < sidebar2.length; i++){
-                    sidebar2[i].style.display = "none";
-                    }
+                    sidebar2[i].style.width = '50%'
+                }
                 fleche.style.transform = "rotate(0deg)";
                 sidebar.style.width = "100px"
                 telechargercv.style.width = "15px"
                 }
                 } else {
-                    var sidebarmobile1 = document.querySelector(".sidebar ul");
-                        if (sidebarmobile1.style.display === "block" && telechargercv.style.display === "block") {
-                            hideSidebarElements();
-                        } else {
+                        if (sidebar.style.height === '80px') {
                             showSidebarElements();
+                            fleche.style.transform = "rotate(-90deg)";
+                        } else {
+                            hideSidebarElements();
+                            fleche.style.transform = "rotate(90deg)";
                         }
                 }
 

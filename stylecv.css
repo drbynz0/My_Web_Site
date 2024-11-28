@@ -4,7 +4,6 @@
         display: flex;
         padding: 0%;
         border-radius: 20px;
-        height: 90px;
         transition: 5s;
         width: 100%;
         z-index: 1000;
@@ -12,14 +11,10 @@
     .flechecv {
         float: right;
         margin: 0%;
-        transform: rotate(-90deg);
     }
     .sidebar h2 {
         margin: 0%;
         text-align: left;
-    }
-    .sidebar ul, .telecharger-cv {
-        display: none;
     }
     .content {
         width: 100%;
@@ -54,7 +49,6 @@
 .flechecv {
     width: 32px;
     cursor: pointer;
-    transform: rotate(180deg);
 }
 
 .flechecv i {
@@ -66,6 +60,7 @@
 }
 
 .sidebar {
+    overflow: hidden;
     position: relative;
     display: block;
     background-color: #2e3b4e;
@@ -78,23 +73,17 @@
 }
 
 .sidebar h2 {
+    overflow: hidden; 
+    display: flex;
+    gap: 10px;
     text-align: center;
-    margin-bottom: 30px;
     color: rgba(17, 210, 188, 0.989);
 }
 
 .sidebar ul {
+    margin-top: 25px;
     list-style-type: none;
     padding: 0;
-    animation: float-sidebar 2s forwards;
-}
-@keyframes float-sidebar {
-    0% {
-        opacity: 0;
-}
-    100% {
-        opacity: 1;
-    }
 }
 
 .sidebar ul li {
@@ -102,8 +91,14 @@
     padding-bottom: 10px;
     display: flex;
 }
+.sidebar span {
+    overflow: hidden;
+}
 
 .sidebar ul li a {
+    overflow: hidden;
+    display: flex;
+    gap: 10px;
     padding: 10px;
     color: white;
     text-decoration: none;
@@ -395,6 +390,7 @@ summary:hover {
 }
 
 .telecharger-cv {
+    overflow: hidden;
     background-color: #455a73;
     padding: 10px;
     border-radius: 10px;
@@ -403,6 +399,8 @@ summary:hover {
     animation: float-sidebar   2s forwards;
 }
 .telecharger-cv a {
+    display: flex;
+    gap: 10px;
     text-decoration: none;
     color: white;
     text-align: center;
