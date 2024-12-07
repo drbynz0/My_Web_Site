@@ -60,6 +60,7 @@
 }
 
 .sidebar {
+    height: auto;
     overflow: hidden;
     position: relative;
     display: block;
@@ -73,7 +74,7 @@
 }
 
 .sidebar h2 {
-    overflow: hidden; 
+    overflow: hidden;
     display: flex;
     gap: 10px;
     text-align: center;
@@ -82,35 +83,50 @@
 
 .sidebar ul {
     margin-top: 25px;
+    display: flex;
+    gap: 30px;
+    flex-direction: column;
     list-style-type: none;
     padding: 0;
 }
 
 .sidebar ul li {
-    margin-bottom: 30px;
-    padding-bottom: 10px;
-    display: flex;
-}
-.sidebar span {
+    position: relative;
     overflow: hidden;
-}
-
-.sidebar ul li a {
-    overflow: hidden;
-    display: flex;
-    gap: 10px;
-    padding: 10px;
-    color: white;
-    text-decoration: none;
-    font-size: 20px;
     border-radius: 10px;
     transition: 0.3s;
 }
 
-.sidebar ul li a:hover, 
+.sidebar ul li a {
+    display: flex;
+    width: 100%;
+    display: flex;
+    gap: 15px;
+    padding: 10px 10px 10px 5px;
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    
+}
+
+.sidebar ul li:hover, 
 .sidebar ul li a.activea {
     background-color: #455a73;
-    transform: translateX(12px);
+}
+.sidebar ul li.no-hover:hover {
+    background-color: inherit;
+}
+.sidebar ul li i {
+    transition: color 0.3s, transform 0.3s;
+}
+.sidebar ul li i:hover,
+.sidebar ul li i.activei {
+    color: rgba(17, 210, 188, 0.989);
+    transform: scale(1.5);
+}
+.sidebar ul li i.no-hover:hover {
+    color: inherit;
+    transform: none;
 }
 
 .content {
