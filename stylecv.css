@@ -245,6 +245,17 @@ summary:hover {
     background-blend-mode: overlay;
 }
 
+.diplomes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.diplome {
+    background-color: #2a3d57;
+    padding: 10px;
+    border-radius: 10px;
+}
+
 .diplome h4 {
     margin: 0%;
     padding: 0%;
@@ -305,6 +316,12 @@ summary:hover {
     background-image: url('https://github.com/drbynz0/My_Web_Site/blob/master/LSCHBR.jpg?raw=true');
 }
 
+.exps-pro {
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #2a3d57;
+}
+
 .exp-pro h4 {
     margin: 0%;
     padding: 0%;
@@ -328,7 +345,7 @@ summary:hover {
     align-items: center;
     background-color: #2a3d57;
     padding: 20px;
-    border-radius: 5px;
+    border-radius: 10px;
 }
 
 .skillname {
