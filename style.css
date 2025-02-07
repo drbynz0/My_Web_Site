@@ -266,6 +266,7 @@ body {
 
 #barnav {
     display: flex;
+    align-items: center;
     position: fixed;
     width: 100%;
     padding: 0%;
@@ -290,7 +291,6 @@ body {
     margin: 5px;
     height: 45px;
     width: 45px;
-    float: left;
 }
 
 .all-icons {

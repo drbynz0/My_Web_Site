@@ -22,6 +22,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 } else {
     // Redirection si le formulaire n'est pas soumis
-    header("D:\Audiobooks\Mon_site_Web\contact.html");
+    header("D:\XAMPP\htdocs\Mon_site_Web\contact.php");
 }
 ?>

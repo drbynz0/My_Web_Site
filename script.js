@@ -226,7 +226,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const blocContainer = document.querySelector('.blocs-news-container');
 
 
-    function scrollLeft() {
+    function scrollLeft(event) {
             if(window.innerWidth <= 770) {
             blocContainer.scrollLeft -= (window.innerWidth - 25);
         } else {
@@ -245,8 +245,6 @@ document.addEventListener("DOMContentLoaded", function() {
     gauche.addEventListener('click', scrollLeft);
     droite.addEventListener('click', scrollRight);
 });
-
-
     
 
 

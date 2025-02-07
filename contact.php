@@ -7,9 +7,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="icon" href="https://github.com/drbynz0/My_Web_Site/blob/master/NR0.png?raw=true" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="stylebg.css">
+    <link rel="stylesheet" href="stylect.css">
 </head>
-<body>   
+<body>
     <header id="barnav">
         <nav class="logo">
             <a href="index.html"><img src="https://github.com/drbynz0/My_Web_Site/blob/master/NR0.png?raw=true" title="Logo"></a>
@@ -32,7 +32,7 @@
                             <a href="cv.html">Curriculum Vitae</a>
                         </div>
                     </main>
-                    <a class="entete" href="contact.php">Contact</a>
+                    <a class="entete" href="contact.html">Contact</a>
                 </div>
             </nav>
         </div>
@@ -47,19 +47,59 @@
         </nav> 
           
     </header>
-<div class="couv">
-    <div class="couv1">
-        <P>Mon blog</P> 
-    </div>
-    <a href="https://www.youtube.com/@DreamBoyNz/videos">
-        <i class="fab fa-youtube"></i>Chaîne YouTube
-    </a>
+<div class="cover">
+    <P>Contact</P> 
 </div>
-    
-   <center><div style="margin-top: 100px;"><i class="fa-solid fa-circle-notch fa-spin"></i> En cours de développement.</div></center>
-        
+    <main id="contact">
+        <div class="contact" id="float">
+            <div class="coordonnees">
+                <div class="imgprofil2">
+                    <i class="fas fa-address-book contact-icon"></i>
+                </div>
+                <h3>NIZAR SOILIHI</h3>
+                <p>Pour me contacter rapidement, vous pouvez utiliser l'un de mes coordonnées ou m'envoyer un Email en remplisant ces champs</p>
+                <div class="co-logo">
+                    <span class="phone"><i class="fas fa-phone"></i></span><strong class="coordonnee">+212 642 77 4321</strong><br/><br/>
+                    <span class="envelope"><i class="fas fa-envelope"></i></span><strong class="coordonnee">soilihinizar04@gmail.com</strong><br/><br/>
+                    <span class="map"><i class="fas fa-map-marker-alt"></i></span><strong class="coordonnee">Maroc / Ben Millal-Atlas</strong>
+                </div>
+                <nav class="contact-icon-res">
+                    <a class="icon-fb" href="https://www.facebook.com/nizar.s00" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                    <a class="icon-wap" href="https://api.whatsapp.com/send?phone=212642774321" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-whatsapp"></i>
+                    </li>
+                    <a class="icon-insta" href="https://www.instagram.com/nizar.s00" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a class="icon-teleg" href="https://t.me/drbynz" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-telegram"></i>
+                    </a>
+                </nav>
+            </div>
+            <div class="message">
+                <h2>Laissez-moi un message</h2>
+                <form action="submit.php" method="POST">
+                    <div class="champs-saisie">
+                    <input type="text" id="name" name="name" placeholder="Nom/prénom" required>
+                    </div>
+                    <div class="champs-saisie">
+                    <input type="email" id="email" name="email" placeholder="Adresse Email" required>
+                    </div>
+                    <div class="champs-saisie">
+                    <input type="tel" id="phone" placeholder="Téléphone" name="phone">
+                    </div>
+                    <div class="champs-saisie">
+                    <textarea type="text" id="message" placeholder="Ecrire un message" name="message" rows="2" required></textarea>
+                    </div>
+                    <button type="submit">Envoyer</button>
+                </form>
+            </div>  
+        </div>
+    </main>
     <script src="script.js"></script>
-</body> 
+</body>
 <footer>
     <div class="footer1">
         <div class="info-legale">
@@ -70,7 +110,7 @@
         <div class="lien-utile">
             <h2>Liens utiles</h2>
             <a href="https://www.w3schools.com/">W3Schools</a>
-            <a href="https://openclassrooms.com/fr/">openclassroom</a>
+            <a href="https://www.openclassroom.com/">openclassroom</a>
             <a href="https://estbm.ac.ma/web/pages/home.php">EST Béni Mellal</a>
             <a href="https://fr.wikipedia.org/wiki/Comores_(pays)">Mon origine</a>
         </div>
@@ -87,9 +127,9 @@
                 <a class="icon-fb" href="https://www.facebook.com/nizar.s00" target="_blank" rel="noopener noreferrer">
                     <i class="fab fa-facebook"></i>
                 </a>
-                <a class="icon-wap" href="https://api.whatsapp.com/send?phone=+212642774321" target="_blank" rel="noopener noreferrer">
+                <a class="icon-wap" href="https://api.whatsapp.com/send?phone=212642774321" target="_blank" rel="noopener noreferrer">
                     <i class="fab fa-whatsapp"></i>
-                </li>
+                </a>
                 <a class="icon-insta" href="https://www.instagram.com/nizar.s00" target="_blank" rel="noopener noreferrer">
                     <i class="fab fa-instagram"></i>
                 </a>
