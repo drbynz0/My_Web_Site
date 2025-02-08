@@ -13,6 +13,7 @@ function adjustToggleVisibility() {
 
 
 var header = document.getElementById("barnav");
+const logo = document.querySelector('.logo img');
 const menuToggle = document.querySelector('.menu-toggle');
 const btnCloseMenu = document.querySelector('.btn-close-menu');
 const entete2 = document.querySelector('.entete2');
@@ -23,7 +24,6 @@ var flecheSousMenu = document.querySelector(".entete i");
 function sousPageVisible(){
     entete2.classList.add('visible');
     sousPage.classList.add('widthSp');
-    header.classList.add('bnoption');
     menuToggle.classList.add('menuToggleHidden');
     btnCloseMenu.classList.add('btnCloseMenuVisible');
 }
@@ -31,15 +31,11 @@ function sousPageVisible(){
 function sousPageHidden(){
     entete2.classList.remove('visible');
     sousPage.classList.remove('widthSp');
-    header.classList.remove('bnoption');
     menuToggle.classList.remove('menuToggleHidden');
     btnCloseMenu.classList.remove('btnCloseMenuVisible');
 }
 
 function sousPageOptions() {
-/*sousPage.addEventListener('mouseenter', () => {
-    sousPageVisible();
-});*/
 
 sousPage.addEventListener('mouseleave', () => {
     sousPageHidden();
@@ -92,12 +88,16 @@ var blocSousMenu = document.getElementById('bloc-sous-menu');
 
 function sousMenuOptions(){
         if (window.innerWidth <= 770) {
+            header.style.height = '70px';
             header.style.justifyContent = 'space-between';
+            logo.style.marginLeft = '5px';
             entete2.style.marginLeft = '0px';
             flecheSousMenu.style.transform = 'rotate(90deg)';
             sousMenu.classList.remove('sousmenuHidden');
         }else {
-            entete2.style.marginLeft = '100px'
+            header.style.height = '80px';
+            logo.style.marginLeft = '60px';
+            entete2.style.marginLeft = '150px'
             header.style.justifyContent = 'normal';
             flecheSousMenu.style.transform = 'rotate(0deg)';
             sousMenu.classList.add('sousmenuHidden');
@@ -162,7 +162,6 @@ document.addEventListener('DOMContentLoaded', function() {
     sousPageOptions();
 
     if (window.innerWidth > 770) {
-        header.style.alignItems = 'center';
         header.style.display = 'flex';
         barnav1.style.display = 'flex';
         menu.style.display = 'flex';
@@ -172,7 +171,6 @@ document.addEventListener('DOMContentLoaded', function() {
         sousMenu.classList.add('sousmenuHidden');
         }
     } else {
-        header.style.alignItems = 'normal';
         header.style.display = 'flex';
         barnav1.style.display = 'block';
         for(let i = 0; i <= bloc.length; i++){

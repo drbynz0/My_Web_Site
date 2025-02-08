@@ -26,18 +26,17 @@
 }
 
 .desc {
-    padding: 10px;
+    margin-top: 200px;
     display: flex;
-    justify-content: space-between;
-    background-color: #2a2d4875;
-    animation: float-section 1s forwards;
+    justify-content: space-evenly;
+    animation: float-section 1s ease-in-out;
 }
 .imgprofil1 {
     height: 400px;
     position: relative;
     background: linear-gradient(to right, rgb(6, 9, 24), rgb(6, 64, 111));
     border-radius: 30% 70% 70% 30% / 30% 58% 42% 70%;
-    box-shadow: 4px 7px 15px rgba(0, 0, 0, 0.765);
+    box-shadow:0px 0px 25px 15px rgba(7, 113, 199, 0.776);
 }
 .imgprofil1 img {
     border-radius: 30% 70% 70% 30% / 30% 58% 42% 70%;
@@ -62,7 +61,77 @@
     margin-bottom: 20px;
     font-size: 13px;
 }
+.profils-utils {
+    display: flex;
+    gap: 20px;
+}
+.profils-utils a {
+    display: inline-block;
+    animation: jump 4s infinite ease-in-out;
+    transition: 0.3s;
+}
+.profils-utils a i {
+    color: #ffffff;
+    transform: scale(1);
+    transition: 0.3s;
+}
+.profils-utils a i:hover {
+    color: #2187d1;
+    transform: scale(1.3);
+}
+@keyframes jump {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+.profils-utils a:nth-child(1) {
+    animation-delay: 0s;
+}
 
+.profils-utils a:nth-child(2) {
+    animation-delay: 0.5s;
+}
+
+.profils-utils a:nth-child(3) {
+    animation-delay: 1s;
+}
+
+.profils-utils a:nth-child(4) {
+    animation-delay: 1.5s;
+}
+.liens-utils {
+    display: flex;
+    gap: 20px;
+}
+.liens-utils a {
+    margin-top: 20px;
+    padding: 10px;
+    text-decoration: none;
+    font-size: 20px;
+    transition: 0.3s;
+}
+.liens-utils a:first-child {
+    color: #ffffff;
+    background-color: #2187d1;
+    border-radius: 5px;
+}
+.liens-utils a:first-child:hover {
+    color: #2187d1;
+    background-color: #ffffff;
+}
+.liens-utils a:last-child {
+    color: #2187d1;
+    border: 1px solid #2187d1;
+    border-radius: 5px;
+}
+.liens-utils a:last-child:hover {
+    color: #ffffff;
+    background-color: darkcyan;
+    border: solid darkcyan 1px;
+}
 .savoir-plus {
     margin-top: 60px;
     text-align: end;

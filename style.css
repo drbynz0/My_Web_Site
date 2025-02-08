@@ -24,9 +24,9 @@
         width: 50px;
         height: 50px;
       }
-      .sous-page.widthSp {
+      .sous-page.widthSp {   
         width: auto;
-        height: 350px;
+        height: auto;
       }
       .btn-close-menu {
         transform: scale(0);
@@ -42,25 +42,28 @@
         border: none;
         cursor: pointer;
         text-align: center;
-        background: none;      
+        background: none;
     }
     .btn-close-menu.btnCloseMenuVisible {
         transform: scale(1);
     }
 
-      .entete2 {
-        width: 100%;
+    .entete2 {
+        position: absolute;
+        top: 70px;
+        width: 50%;
+        height: 100vh;
+        background-color: #071f42e8;
+        backdrop-filter: blur(50px);
+        display: flex;
         padding: 10px;
         padding-bottom: 0%;
-        display: block;
         flex-direction: column;
-        justify-content: end;
         transform: translateX(100%);
         transition: transform 0.3s;
     }
     .entete2.visible {
-        transform: translateX(-20%);
-        align-items: end;
+        transform: translateX(-60%);
     }
 
     #reseau-sociaux {
@@ -68,8 +71,9 @@
     }
 
     #sous-menu {
-        opacity: 0;
-        transform: translateX(150%);
+        opacity: 1;
+        width: 130px;
+        transform: translateX(200%);
         position: relative;
         transition: transform 0.3s, opacity 0.3s;
       }
@@ -80,6 +84,7 @@
       }
       
     #barnav {
+        align-items: center;
         display: flex;
         height: 55px;
         transition: height 0.3s;
@@ -167,7 +172,7 @@
     100% { background-position: 0% 50%; }
 }
 body {
-    background-color: #0F131F;
+    background-color:rgb(26, 34, 58);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -235,8 +240,6 @@ body {
     display: flex;
     gap: 60px;
 }
-
-
 .entete:hover,
 .entete.activeentete {
     color: rgb(60, 146, 218);
@@ -267,30 +270,27 @@ body {
 #barnav {
     display: flex;
     align-items: center;
+    justify-content: center;
     position: fixed;
+    top: 0;
     width: 100%;
+    height: 80px;
     padding: 0%;
     z-index: 10000;
-    background-color: #071f42c5;
+    background: linear-gradient(to right, rgba(6, 9, 24, 0.833), rgba(6, 64, 111, 0.838));
     backdrop-filter: blur(50px);
     box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.5);
-    border-bottom: 1px solid #ddd;
-    border-bottom-left-radius: 15px;
-    border-bottom-right-radius: 15px;
-    top: 0;
-    left: 0;
 }
-
 .barnav1 {
-    display: flex;
-    gap: 100px;
+    animation: float-entete 1s ease;
 }
 
 
 .logo img {
     margin: 5px;
-    height: 45px;
-    width: 45px;
+    height: 55px;
+    width: 50px;
+    animation: float-entete 1s ease;
 }
 
 .all-icons {
@@ -300,8 +300,8 @@ body {
     margin-left: 10px;
     margin-right: 10px;
     opacity: 0;
-    list-style: none;  
-    white-space: nowrap; 
+    list-style: none;
+    white-space: nowrap;
 }
 
 #reseau-sociaux:hover .all-icons {
@@ -328,14 +328,16 @@ body {
     background-color: darkcyan;
     cursor: pointer;
     margin-top: 7px;
-    margin-right: 10px;
+    margin-right: 40px;
     align-items: center;
+    animation: float-entete 1s ease;
+    box-shadow: 7px 0px 20px rgba(0, 0, 0, 0.765);
 }
 #reseau-sociaux:hover {
     display: flex;
     width: auto;
     align-items: center;
-    background-color: #4b8fc0c8;
+    background: linear-gradient(to right, rgb(6, 9, 24), rgb(6, 64, 111));
 }
 #userprofils {
     top: 0;
@@ -405,7 +407,6 @@ body {
     max-width: 100%;
     background-position: 100%;
 }
-
 
 footer {
     margin-top: 200px;
@@ -521,9 +522,23 @@ footer center p {
     color: #6d6f70;
     font-size: 12px;
 }
+
+/* Animation section */
 @keyframes float-section {
     0% {
-        transform: translateY(-10%);
+        transform: translateY(-20%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Animation entete */
+@keyframes float-entete {
+    0% {
+        transform: translateY(-20%);
         opacity: 0;
     }
     100% {

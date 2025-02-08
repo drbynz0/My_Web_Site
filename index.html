@@ -46,109 +46,111 @@
             <div id="userprofils"><i class="fas fa-user"></i></div>
         </nav>
     </header>
-<div class="cover">
-    <P>Accueil</P>
-</div>
-<main class="accueil">
-    <nav class="desc">
-        <div id="intro">
-            <h3>Bienvenue Dans mon Site Web -<br> NIZAR SOILIHI</h3>
-            <p>
-           <!-- Bonjour et bienvenue sur mon site web personnel ! Je suis ravi de vous accueillir ici.-->
-            Ce site est une vitrine de mon travail, de mes passions et de mon parcours. <br>Que vous soyez ici par curiosité, pour explorer mes réalisations ou simplement<br> pour en apprendre un peu plus sur moi.<br/>
-            Je vous invite à parcourir ces pages et à découvrir ce que je peux vous offrir.
-            </p>
-            <span class="savoir-plus"><a href="infopersonnel.html"><i class="fas fa-plus"></i> En savoir plus</a></span>
-        </div>
-        <div class="imgprofil1">
-            <img src="https://github.com/drbynz0/My_Web_Site/blob/master/photo-acc.png?raw=true" alt="Photo profil">
-        </div>
-    </nav>
-
-    <section class="a-la-une" id="float">
-        <article class="news">
-            <h2>News</h2>
+    <main class="accueil">
+        <nav class="desc">
+            <div id="intro">
+                <h3>Bienvenue Dans mon Site Web -<br> NIZAR SOILIHI</h3>
+                <p>
+                Ce site est une vitrine de mon travail, de mes passions et de mon parcours. <br>Que vous soyez ici par curiosité, pour explorer mes réalisations ou simplement<br> pour en apprendre un peu plus sur moi.<br/>
+                Je vous invite à parcourir ces pages et à découvrir ce que je peux vous offrir.
+                </p>
+                <div class="profils-utils">
+                    <a href="https://www.facebook.com/nizar.s00" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-facebook" style="font-size: 2em;"></i></a>
+                    <a href="https://github.com/drbynz0/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github" style="font-size: 2em;"></i></a>
+                    <a href="https://linkedin.com/in/soilihi-nizar-0b2a8a25a" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin" style="font-size: 2em;"></i></a>
+                    <a href="https://t.me/+yQZL73neIvpkZDJk" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-telegram" style="font-size: 2em;"></i></a>
+                </div>
+                <div class="liens-utils">
+                    <a href="cv.html">Télécharger CV</a>
+                    <a href="contact.html">Me contacter</a>
+                </div>
+            </div>
+            <div class="imgprofil1">
+                <img src="https://github.com/drbynz0/My_Web_Site/blob/master/photo-acc.png?raw=true" alt="Photo profil">
+            </div>
+        </nav>
+        <section class="a-la-une" id="float">
+            <article class="news">
+                <h2>News</h2>
+                
+                <div class="news-container">
+                    <div class="gauche">
+                        <i class="fa-solid fa-angles-left btn prev"></i>
+                    </div>
+                    <div class="blocs-news-container">
+                        <div class="bloc" id="bloc1">
+                            <div>
+                                <i class="fa-solid fa-angles-up btn"></i>
+                                <p>Nous avons mis une solution provisoire pour l'envoi de message dans la partie contact. Nous somme toujours sur le moyen de trouver une solution professionnelle.</p>
+                                <span class="Date">01/03/2024</span>
+                            </div>
+                        </div>
+                        <div class="bloc" id="bloc2">
+                            <div>
+                                <i class="fa-solid fa-angles-up btn"></i>
+                                <p>Des mises à jour seront toujours encours de développement pour une bonne amélioration de notre domaine. La partie Blog n'est pas encore disponible.</p>
+                                <span class="Date">21/02/2024</span>
+                            </div>
+                        </div>
+                        <div class="bloc" id="bloc3">
+                            <div>
+                                <i class="fa-solid fa-angles-up btn"></i>
+                                <p>Ceci et notre premier pas dans le domaine du développement Web. n'hesitez pas de nous donner votre avis dans tout les cas nécessaires. Merci!<br></p>
+                                <span class="Date">19/02/2024</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="droite">
+                        <i class="fa-solid fa-angles-right btn next"></i>
+                    </div>
+                </div>
+            </article>
+            <!-- Section pour afficher les avis -->
+            <aside id="reviews">
+                <h2>Avis des visiteurs</h2>
+                <div id="reviewsList"></div>
+            </aside>    
+        </section>
             
-            <div class="news-container">
-                <div class="gauche">
-                    <i class="fa-solid fa-angles-left btn prev"></i>
+        <!--avis des visiteurs-->
+        <!-- Bouton flottant pour ouvrir le bloc -->
+        <button id="openReviewBlock" class="floating-button" title="Laissez un avis">
+            <i class="fas fa-comment-dots"></i>
+            <span class="button-text">Laissez votre avis</span>
+        </button>
+        <!-- Bloc de commentaire flottant -->
+        <div id="reviewBlock" class="review-block">
+            <h2>Laissez votre avis</h2>
+            <form id="reviewForm">
+                <div class="visiteurname">
+                    <input type="text" id="name" name="name" required>
+                    <label for="name">Nom et Prénom </label>
                 </div>
-                <div class="blocs-news-container">
-                    <div class="bloc" id="bloc1">
-                        <div>
-                            <i class="fa-solid fa-angles-up btn"></i>
-                            <p>Nous avons mis une solution provisoire pour l'envoi de message dans la partie contact. Nous somme toujours sur le moyen de trouver une solution professionnelle.</p>
-                            <span class="Date">01/03/2024</span>
-                        </div>
+                <div class="evaluation">
+                    <label for="rating">Évaluation:</label>
+                    <div class="stars">
+                        <input type="radio" id="star5" name="rating" value="5"><label for="star5">&#9733;</label>
+                        <input type="radio" id="star4" name="rating" value="4"><label for="star4">&#9733;</label>
+                        <input type="radio" id="star3" name="rating" value="3"><label for="star3">&#9733;</label>
+                        <input type="radio" id="star2" name="rating" value="2"><label for="star2">&#9733;</label>
+                        <input type="radio" id="star1" name="rating" value="1"><label for="star1">&#9733;</label>
                     </div>
-                    <div class="bloc" id="bloc2">
-                        <div>
-                            <i class="fa-solid fa-angles-up btn"></i>
-                            <p>Des mises à jour seront toujours encours de développement pour une bonne amélioration de notre domaine. La partie Blog n'est pas encore disponible.</p>
-                            <span class="Date">21/02/2024</span>
-                        </div>
-                    </div>
-                    <div class="bloc" id="bloc3">
-                        <div>
-                            <i class="fa-solid fa-angles-up btn"></i>
-                            <p>Ceci et notre premier pas dans le domaine du développement Web. n'hesitez pas de nous donner votre avis dans tout les cas nécessaires. Merci!<br></p>
-                            <span class="Date">19/02/2024</span>
-                        </div>
-                    </div>
+                </div>        
+                <div class="comment">
+                    <textarea id="comment" name="comment" required></textarea>
+                    <label for="comment">Ajouter un commentaire</label>
                 </div>
-                <div class="droite">
-                    <i class="fa-solid fa-angles-right btn next"></i>
-                </div>
-            </div>
-        </article>
-        <!-- Section pour afficher les avis -->
-        <aside id="reviews">
-            <h2>Avis des visiteurs</h2>
-            <div id="reviewsList"></div>
-        </aside>    
-    </section>
-        
-<!--avis des visiteurs-->
-<!-- Bouton flottant pour ouvrir le bloc -->
-<button id="openReviewBlock" class="floating-button" title="Laissez un avis">
-    <i class="fas fa-comment-dots"></i>
-    <span class="button-text">Laissez votre avis</span>
-</button>
-
-<!-- Bloc de commentaire flottant -->
-<div id="reviewBlock" class="review-block">
-    <h2>Laissez votre avis</h2>
-    <form id="reviewForm">
-        <div class="visiteurname">
-            <input type="text" id="name" name="name" required>
-            <label for="name">Nom et Prénom </label>
+                <button id="submit" type="submit">Soumettre</button>
+            </form>
+            <button id="closeReviewBlock" class="close-button">
+                <i class="fas fa-times"></i>
+            </button>
         </div>
-        <div class="evaluation">
-            <label for="rating">Évaluation:</label>
-            <div class="stars">
-                <input type="radio" id="star5" name="rating" value="5"><label for="star5">&#9733;</label>
-                <input type="radio" id="star4" name="rating" value="4"><label for="star4">&#9733;</label>
-                <input type="radio" id="star3" name="rating" value="3"><label for="star3">&#9733;</label>
-                <input type="radio" id="star2" name="rating" value="2"><label for="star2">&#9733;</label>
-                <input type="radio" id="star1" name="rating" value="1"><label for="star1">&#9733;</label>
-            </div>
-        </div>        
-        <div class="comment">
-            <textarea id="comment" name="comment" required></textarea>
-            <label for="comment">Ajouter un commentaire</label>
-        </div>
-        <button id="submit" type="submit">Soumettre</button>
-    </form>
-    <button id="closeReviewBlock" class="close-button">
-        <i class="fas fa-times"></i>
-    </button>
-</div>
-
-</main>
-<script src="script.js"></script>
-<script src="scriptacc.js"></script>
-<script src="https://www.gstatic.com/firebasejs/10.13.0/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/10.13.0/firebase-database.js"></script>
+    </main>
+    <script src="script.js"></script>
+    <script src="scriptacc.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.13.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.13.0/firebase-database.js"></script>
 </body>
 <footer>
     <div class="footer1">
