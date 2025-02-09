@@ -172,7 +172,7 @@
     100% { background-position: 0% 50%; }
 }
 body {
-    background-color:rgb(26, 34, 58);
+    background-color: #0d152f;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -233,7 +233,6 @@ body {
     width: auto;
     cursor: pointer;
     transition: color 0.3s;
-
 }
 
 .entete2 {
