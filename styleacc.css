@@ -146,15 +146,30 @@
 
 /* Parcours */
 .bloc-parcours {
-    margin-top: 100px;
+    margin-top: 200px;
     animation: float-section 1s ease-in-out;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #051223;
+    box-shadow:0px 0px 70px 70px #051223;
+
 }
 .bloc-parcours h2 {
+    position: relative;
+    width: auto;
     text-align: center;
-    color: #2187d1;
+    color: #86a3c1;
     font-size: 30px;
     margin-bottom: 20px;
+}
+.bloc-parcours h2::after {
+    position: absolute;
+    content: "";
+    top: 60px;
+    left: 45%;
+    bottom: 0;
+    height: 3px;
+    width: 10%;
+    background-color: #86a3c1;
 }
 .parcours {
     display: flex;
@@ -163,19 +178,19 @@
     flex-wrap: wrap;
     align-items: center;
     margin-top: 50px;
-    animation: float-section 1s ease-in-out;
 }
 .parcours > div {
     flex: 1 1 calc(33.33% - 100px);
     max-width: calc(33.33% - 100px);
 }
 .parcours-item {
+    cursor: pointer;
     display: flex;
     gap: 10px;
     flex-direction: column;
     align-items: center;
     margin: 10px;
-    padding: 10px;
+    padding: 6px;
     border-radius: 10px;
     background-color:rgb(18, 29, 60);
     transition: 0.3s;
@@ -184,6 +199,13 @@
     width: 100%;
     height: 200px;
     border-radius: 10px;
+    background-size: 100%;
+    background-position: center;
+    transition: background-size 0.3s;
+}
+.parcours-img:hover {
+    background-size: 115%;
+    background-position: center;
 }
 .details-parcours span {
     font-size: 10px;
@@ -200,7 +222,13 @@
     background: linear-gradient(to right, rgb(73, 37, 129), rgb(58, 13, 54));
     transition: 0.3s;
 }
-.parcours-img:nth-child(1) {
+.parcours-item:nth-child(1) .parcours-img {
+    background-image: url('https://blog.wanteddesign.fr/content/uploads/2021/05/development-webdesign-copie.jpg');
+}
+.parcours-item:nth-child(2) .parcours-img {
+    background-image: url('https://blog.wanteddesign.fr/content/uploads/2021/05/development-webdesign-copie.jpg');
+}
+.parcours-item:nth-child(3) .parcours-img {
     background-image: url('https://blog.wanteddesign.fr/content/uploads/2021/05/development-webdesign-copie.jpg');
 }
 
