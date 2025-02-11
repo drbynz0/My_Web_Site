@@ -65,7 +65,7 @@ function sousMenuVisible(){
             flecheSousMenu.style.transform = 'rotate(-180deg)';
             sousMenu.classList.add('sousmenuVisible');
             sousMenu.classList.remove('sousmenuHidden');
-        }    
+        }
 };
 
 function sousMenuHidden() {

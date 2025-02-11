@@ -189,7 +189,7 @@
     margin-top: 50px;
 }
 
-.parcours-item, .competence {
+.parcours-item {
     cursor: pointer;
     display: flex;
     gap: 10px;
@@ -201,41 +201,47 @@
     background-color:rgb(18, 29, 60);
     transition: 0.3s;
 }
-.parcours-img, .competence-img {
+.parcours-img {
     width: 100%;
     height: 250px;
     border-radius: 10px;
-    background-size: 100%;
+    background-size: 115%;
     background-position: center;
     transition: background-size 0.3s;
 }
 .parcours-img:hover {
-    background-size: 115%;
+    background-size: 125%;
     background-position: center;
 }
-.details-parcours span, .details-competence span {
+.details-parcours {
+    max-width: 500px;
+}
+.details-parcours span {
     font-size: 10px;
     background: linear-gradient(to right, rgb(58, 13, 54), rgb(73, 37, 129));
     padding: 5px;
     border-radius: 20px;
 }
-.details-parcours a, .details-competence a {
+.details-parcours a {
     text-decoration: none;
     color: white;
     transition: 0.3s;
 }
-.details-parcours span:hover, .details-competence span:hover {
+.details-parcours span:hover {
     background: linear-gradient(to right, rgb(73, 37, 129), rgb(58, 13, 54));
     transition: 0.3s;
 }
 .parcours-item:nth-child(1) .parcours-img {
-    background-image: url('https://blog.wanteddesign.fr/content/uploads/2021/05/development-webdesign-copie.jpg');
+    background-image: url('https://th.bing.com/th/id/OIP.W7W2eeTpRsNZ-7q26mw55wHaFj?rs=1&pid=ImgDetMain');
 }
 .parcours-item:nth-child(2) .parcours-img {
-    background-image: url('https://blog.wanteddesign.fr/content/uploads/2021/05/development-webdesign-copie.jpg');
+    background-image: url('https://th.bing.com/th/id/OIP.W7W2eeTpRsNZ-7q26mw55wHaFj?rs=1&pid=ImgDetMain');
 }
 .parcours-item:nth-child(3) .parcours-img {
-    background-image: url('https://blog.wanteddesign.fr/content/uploads/2021/05/development-webdesign-copie.jpg');
+    background-image: url('https://orientation-chabab.com/images/fste-errachidia.png');
+}
+.parcours-item:nth-child(4) .parcours-img {
+    background-image: url('https://github.com/drbynz0/My_Web_Site/blob/master/LSCHBR.jpg?raw=true');
 }
 
 .bloc-competences {
@@ -245,7 +251,96 @@
     background-color: #000000;
     box-shadow:0px 0px 70px 70px #000000;
 }
-
+.competence-item {
+    position: relative;
+    cursor: pointer;
+    margin: 20px;
+    height: 350px;
+    border-radius: 10px;
+    transition: 0.3s;
+    background-color: #1a57d2;
+}
+.competence {
+    position: relative;
+    overflow: hidden;
+    background-color: #0b5c4d75;
+    cursor: pointer;
+    width: 500px;
+    height: 350px;
+    border-radius: 10px;
+    transition: 0.3s;
+    margin: 10px;
+}
+.competence:hover .competence-img {
+    filter: brightness(1);
+}
+.competence-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    cursor: pointer;
+    border-radius: 12px;
+    transition: 0.3s;
+    background-image: url('https://github.com/drbynz0/My_Web_Site/blob/master/LSCHBR.jpg?raw=true');
+    background-position: center;
+    background-size: 130%;
+    filter: brightness(0.5);
+}
+.competence:nth-child(1) .competence-img {
+    background-image: url('https://github.com/drbynz0/My_Web_Site/blob/master/LSCHBR.jpg?raw=true');
+}
+.competence:nth-child(2) .competence-img {
+    background-image: url('https://github.com/drbynz0/My_Web_Site/blob/master/LSCHBR.jpg?raw=true');
+}
+.competence:nth-child(3) .competence-img {
+    background-image: url('https://github.com/drbynz0/My_Web_Site/blob/master/LSCHBR.jpg?raw=true');
+}
+.competence:nth-child(4) .competence-img {
+    background-image: url('https://github.com/drbynz0/My_Web_Site/blob/master/LSCHBR.jpg?raw=true');
+}
+.details-competence {
+    position: absolute;
+    bottom: 6px;
+    left: 6px;
+    right: 6px;
+    max-width: 500px;
+    border-radius: 10px;
+    background-color: #212551d4;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    max-width: 500px;
+    gap: 5px;
+    padding: 10px;
+    transition: 0.3s;
+}
+.details-competence > div span {
+    font-weight: bold;
+    color: #86a3c1;
+}
+.niveau-competence {
+    display: flex;
+    justify-content: start;
+    height: 20px;
+    width: 100%;
+    background-color: #424a50;
+    border-radius: 20px;
+}
+.competence:nth-child(1) .niveau-competence span {
+    width: 0%;
+    background: linear-gradient(to right, #af4c4c, rgb(74, 174, 194), #0ecd61);
+    padding: 5px;
+    border-radius: 20px;
+    transition: width 0.5s ease-in-out;
+}
+.competence:nth-child(1):hover .niveau-competence span {
+    width: 80%;
+}
 .bloc-projets {
     margin-top: 200px;
     animation: float-section 1s ease-in-out;
@@ -278,12 +373,10 @@
 }
 .projet:hover .details-projet {
     opacity: 0;
-
 }
 .projet-video {
     cursor: pointer;
     align-items: center;
-    height: 350px;
     border-radius: 12px;
     transition: 0.3s;
     width: 100%;
@@ -356,7 +449,7 @@
 .voir-plus:hover {
     transform: scale(1.1);
     color: #1a57d2;
-    transition: 0.3s;    
+    transition: 0.3s;
 }
 .droite, .gauche {
     z-index: 1000;

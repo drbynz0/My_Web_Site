@@ -51,7 +51,8 @@
     .entete2 {
         position: absolute;
         top: 70px;
-        width: 50%;
+        width: 30%;
+        right: 0;
         height: 100vh;
         background-color: #071f42e8;
         backdrop-filter: blur(50px);
@@ -60,10 +61,10 @@
         padding-bottom: 0%;
         flex-direction: column;
         transform: translateX(100%);
-        transition: transform 0.3s;
+        transition: transform 0.3s ease-in-out;
     }
     .entete2.visible {
-        transform: translateX(-60%);
+        transform: translateX(0%);
     }
 
     #reseau-sociaux {
@@ -75,7 +76,7 @@
         width: 130px;
         transform: translateX(200%);
         position: relative;
-        transition: transform 0.3s, opacity 0.3s;
+        transition: transform 0.3s, opacity 0.3s ease-in-out;
       }
     
       #sous-menu.sousmenuOption {
@@ -369,8 +370,8 @@ body {
 
 #sous-menu.sousmenuHidden {
     opacity: 0;
-    transform: translateY(-190%);
-    transition: transform 0.3s;
+    transform: translateY(-200%);
+    transition: transition 0.3s;
 }
 #sous-menu.soumenuVisible {
     opacity: 1;
