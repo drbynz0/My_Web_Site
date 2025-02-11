@@ -162,7 +162,7 @@
     box-shadow:0px 0px 70px 70px #051223;
 
 }
-.bloc-parcours h2, .bloc-competences h2 {
+.bloc-parcours h2, .bloc-competences h2, .bloc-projets h2 {
     position: relative;
     width: auto;
     text-align: center;
@@ -170,7 +170,7 @@
     font-size: 30px;
     margin-bottom: 20px;
 }
-.bloc-parcours h2::after, .bloc-competences h2::after {
+.bloc-parcours h2::after, .bloc-competences h2::after, .bloc-projets h2::after {
     position: absolute;
     content: "";
     top: 60px;
@@ -203,7 +203,7 @@
 }
 .parcours-img, .competence-img {
     width: 100%;
-    height: 200px;
+    height: 250px;
     border-radius: 10px;
     background-size: 100%;
     background-position: center;
@@ -243,9 +243,95 @@
     animation: float-section 1s ease-in-out;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     background-color: #000000;
-    box-shadow:0px 0px 70px 70px #000000;    
+    box-shadow:0px 0px 70px 70px #000000;
 }
 
+.bloc-projets {
+    margin-top: 200px;
+    animation: float-section 1s ease-in-out;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #1d2f41;
+    box-shadow:0px 0px 70px 70px #1d2f41;
+}
+.projets {
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+.projet {
+    cursor: pointer;
+    align-items: center;
+    margin: 20px;
+    height: 350px;
+    border-radius: 10px;
+    transition: 0.3s;
+    box-shadow: 0px 0px 10px 5px #0a051475;
+}
+.projet a {
+    text-decoration: none;
+    color: white;
+}
+.projet:hover {
+    transform: scale(1.1);
+    transition: 0.3s;
+}
+.projet:hover .details-projet {
+    opacity: 0;
+
+}
+.projet-video {
+    cursor: pointer;
+    align-items: center;
+    height: 350px;
+    border-radius: 12px;
+    transition: 0.3s;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.projet-apercu {
+    position: relative;
+    height: 350px;
+    width: auto;
+    border-radius: 10px;
+    transition: background-size 0.3s;
+}
+.details-projet {
+    background-color: #081738d4;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 30px;
+    text-align: center;
+    opacity: 1;
+    transition: 0.5s;
+}
+.projet-github a {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 10px;
+    background-color: #19496b;
+    transition: 0.3s;
+}
+.projet-github a:hover {
+    color: #19496b;
+    background-color: #ffffff;
+    transition: 0.3s;
+}
 #reviews {
     width: 100%;
     height: 100%;
