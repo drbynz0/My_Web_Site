@@ -1,3 +1,19 @@
+document.addEventListener("DOMContentLoaded", function () {
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("show");
+            }
+        });
+    }, { threshold: 0.2 });
+
+    document.querySelectorAll(".affiche-element").forEach(element => {
+        observer.observe(element);
+    });
+});
+
+
+
 function adjustToggleVisibility() {
     var toggle = document.querySelector('.menu-toggle');
     const btnCloseMenu = document.querySelector('.btn-close-menu');
@@ -9,8 +25,6 @@ function adjustToggleVisibility() {
         btnCloseMenu.style.display = "none";
     }
 }
-
-
 
 var header = document.getElementById("barnav");
 const logo = document.querySelector('.logo img');

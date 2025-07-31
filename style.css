@@ -140,6 +140,7 @@
 
     body {
         display: block;
+        font-family: sans-serif;
     }
     .sous-section {
         flex-direction:column;
@@ -172,6 +173,9 @@
     50% { background-position: 100% 50%; }
     100% { background-position: 0% 50%; }
 }
+html {
+    scroll-behavior: smooth;
+}
 body {
     background-color: #0d152f;
     background-size: cover;
@@ -185,6 +189,15 @@ body {
     padding: 0%;
     width: 100%;
     animation: body 0.5s forwards;
+}
+.affiche-element {
+    opacity: 0;
+    transform: rotate(-10deg);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+.affiche-element.show {
+    opacity: 1;
+    transform: rotate(0);
 }
 @keyframes body {
     0% {
@@ -211,6 +224,7 @@ body {
     width: 60%; 
     height: 500px; 
 }
+
 @keyframes slide {
     0% { left: 100%; } 
     100% { left: -100%; } 
@@ -241,7 +255,7 @@ body {
     gap: 60px;
 }
 .entete:hover,
-.entete.activeentete {
+.entete.activepage {
     color: rgb(60, 146, 218);
 }
 .entete::after {
@@ -259,6 +273,10 @@ body {
     transition: transform 0.3s ease, visibility 0.3s ease;
 }
 .entete:hover::after {
+    visibility: visible;
+    transform: scaleX(1);
+}
+.entete.activepage::after {
     visibility: visible;
     transform: scaleX(1);
 }
@@ -294,68 +312,34 @@ body {
 }
 
 .all-icons {
-    transition: opacity 0.3s, transform 0.3s;
-    transform: translateX(20px);
-    transition: transform 0.3s;
-    margin-left: 10px;
-    margin-right: 10px;
-    opacity: 0;
-    list-style: none;
-    white-space: nowrap;
-}
-
-#reseau-sociaux:hover .all-icons {
-    opacity: 1;
     display: flex;
-    gap: 30px;
-    transform: translateX(0);
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    list-style: none;
 }
 .all-icons a{
     font-size: 25px;
     color: #d5eff2;
+    transform: scale(1);
+    transition: transform 0.3s;
 }
 .all-icons a:hover {
     transform: scale(1.5);
     transition: transform 0.3s;
 }
+
 #reseau-sociaux {
     position: absolute;
     right: 0;
-    width: 40px;
-    height: 40px;
-    border-radius: 20px;
-    transition: background-color 0.3s ease;
-    background-color: darkcyan;
-    cursor: pointer;
-    margin-top: 7px;
+    border-radius: 25px;
     margin-right: 40px;
+    padding: 10px 15px;
     align-items: center;
-    animation: float-entete 1s ease;
     box-shadow: 7px 0px 20px rgba(0, 0, 0, 0.765);
-}
-#reseau-sociaux:hover {
-    display: flex;
-    width: auto;
-    align-items: center;
     background: linear-gradient(to right, rgb(6, 9, 24), rgb(6, 64, 111));
 }
-#userprofils {
-    top: 0;
-    right: 0;
-    margin-top: 10px;
-    margin-right: 9px;
-    position: absolute;
-    width: 20px;
-    border-radius: 50%;
-    opacity: 0.5;
 
-}
-#reseau-sociaux:hover #userprofils {
-    display: none;
-}
-#userprofils i {
-    font-size: 20px;
-}
 #bloc-sous-menu {
     height: 20px;
 }
@@ -373,6 +357,7 @@ body {
     transform: translateY(-200%);
     transition: transition 0.3s;
 }
+
 #sous-menu.soumenuVisible {
     opacity: 1;
     transform: translateY(0%);
@@ -525,18 +510,6 @@ footer center p {
 
 /* Animation section */
 @keyframes float-section {
-    0% {
-        transform: translateY(-20%);
-        opacity: 0;
-    }
-    100% {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-
-/* Animation entete */
-@keyframes float-entete {
     0% {
         transform: translateY(-20%);
         opacity: 0;

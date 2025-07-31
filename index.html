@@ -23,8 +23,7 @@
                     <i class="fas fa-times"></i>
                 </button>
                 <div id="entete2" class="entete2">
-                    <a class="entete" href="index.html">Accueil</a>
-                    <a class="entete" href="blog.html">Blog</a>
+                    <a class="entete activepage" href="index.html">Accueil</a>
                     <main id="bloc-sous-menu">
                         <span class="entete" id="summary"><i class="fas fa-chevron-down"></i> Qui suis je?</span>
                         <div id="sous-menu">
@@ -32,7 +31,8 @@
                             <a href="cv.html">Curriculum Vitae</a>
                         </div>
                     </main>
-                    <a class="entete" href="contact.php">Contact</a>
+                    <a class="entete" href="blog.html">Projets</a>
+                    <a class="entete" href="contact.html">Contact</a>
                 </div>
             </nav>
         </div>
@@ -43,22 +43,20 @@
                 <a class="icon-insta" href="https://www.instagram.com/nizar.s00/" title="Mon Instagram" target="_blank"><i class="fab fa-instagram"></i></a>
                 <a class="icon-teleg" href="https://t.me/drbynz" title="Mon Telegram" target="_blank"><i class="fab fa-telegram"></i></a>
             </div>
-            <div id="userprofils"><i class="fas fa-user"></i></div>
         </nav>
     </header>
     <main class="accueil">
-        <nav class="desc">
+        <section class="desc section-padding" class="affiche-element" id="desc">
             <div id="intro">
-                <h3>Bienvenue Dans mon Site Web -<br> NIZAR SOILIHI</h3>
+                <h1>Bienvenue Dans mon<br> <span>PortFolio</span>,<br>Je suis <strong>NIZAR SOILIHI</strong></h1>
                 <p>
-                    Etudiant en Génie Informatique à l'EST Béni Mellal,<br>
-                    je suis passionné par tout ce qui concerne l'informatique,<br>
-                    en particulier le développement Web/Mobile et les système d'informations.<br>
-                    Ce site est une vitrine de mon travail, de mes passions et de mon parcours. <br>Que vous soyez ici par curiosité, pour explorer mes réalisations ou simplement<br> pour en apprendre un peu plus sur moi.<br/>
+                    Etudiant en Génie Informatique,<br>
+                    passionné par la création et l'innovation technologique.<br>
+                    Ce site est une vitrine de mon travail, de mes passions et de mon parcours.<br><br>
                     Je vous invite à parcourir ces pages et à découvrir ce que je peux vous offrir.<br>
                 </p>
                 <div class="profils-utils">
-                    <a href="https://www.facebook.com/nizar.s00" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-facebook" style="font-size: 2em;"></i></a>
+                    <a href="https://www.facebook.com/nizar.s00" target="_blank" rel="noopener noreferrer" title="Mon profil Facebook"><i class="fa-brands fa-facebook" style="font-size: 2em;"></i></a>
                     <a href="https://github.com/drbynz0/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github" style="font-size: 2em;"></i></a>
                     <a href="https://linkedin.com/in/soilihi-nizar-0b2a8a25a" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin" style="font-size: 2em;"></i></a>
                     <a href="https://t.me/+yQZL73neIvpkZDJk" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-telegram" style="font-size: 2em;"></i></a>
@@ -71,126 +69,226 @@
             <div class="imgprofil1">
                 <img src="https://github.com/drbynz0/My_Web_Site/blob/master/photo-acc.png?raw=true" alt="Photo profil">
             </div>
-        </nav>
-        
-        <div class="bloc-parcours">
+        </section>
+        <section class="bloc-parcours section-padding" id="parcours" class="affiche-element">
             <h2>Mon parcours</h2>
-            <div class="parcours">
-                <div class="parcours-item">
-                    <div class="parcours-img">
-                    </div>
-                    <div class="details-parcours">
-                        <span>2024-202125</span>
-                        <span><a href="#">Ecole Supérieure de Technologie Beni Mellal</a></span>
-                        <p>2ème année en Génie informatique - DUT</p>
-                    </div>
-                </div>
-                <div class="parcours-item">
-                    <div class="parcours-img">
-                    </div>
-                    <div class="details-parcours">
-                        <span>2023-2024</span>
-                        <span><a href="#">Ecole Supérieure de Technologie Beni Mellal</a></span>
-                        <p>1ère année en Génie informatique - DUT</p>
-                    </div>
-                </div>
-                <div class="parcours-item">
-                    <div class="parcours-img">
-                    </div>
-                    <div class="details-parcours">
-                        <span>2022-2023</span>
-                        <span><a href="#">Faculté de Sciences et Techniques d'Errachidia</a></span>
-                        <p>Une année en Mathématiques - Informatique - Physiques</p>
+            
+            <div class="timeline">
+                <!-- Élément 1 -->
+                <div class="education-card left">
+                    <div class="education-content">
+                        <div class="flex flex-col md:flex-row gap-6">
+                            <div class="md:w-1/3 etab-img">
+                                <img src="https://th.bing.com/th/id/OIP.W7W2eeTpRsNZ-7q26mw55wHaFj?rs=1&pid=ImgDetMain" class="w-full h-auto rounded-lg object-cover shadow-md">
+                            </div>
+                            <div class="md:w-2/3">
+                                <h2 class="text-2xl font-semibold text-blue-700">Diplôme Universitaire de Technologie (DUT)</h2>
+                                <h3 class="text-lg text-blue-500 mb-2"><a href="https://estbm.ac.ma/">Ecole Supérieure de Technologie (EST) Béni Mellal</a></h3>
+                                <p class="text-gray-700 mb-2">2024 - 2025</p>
+                                <p class="text-gray-600"> </p>
+                                <ul class="mt-3 text-sm text-gray-500 list-disc pl-5">
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="parcours-item">
-                    <div class="parcours-img">
-                    </div>
-                    <div class="details-parcours">
-                        <span>2018-2021</span>
-                        <span><a href="#">Lycée Scientifique Cheikh Hamdan Ben Rachid</a></span>
-                        <p>Obtention du Baccalauréat Scientifique - BAC C</p>
+                
+                <!-- Élément 2 -->
+                <div class="education-card right">
+                    <div class="education-content">
+                        <div class="flex flex-col md:flex-row gap-6">
+                            <div class="md:w-1/3 etab-img">
+                                <img src="https://th.bing.com/th/id/OIP.W7W2eeTpRsNZ-7q26mw55wHaFj?rs=1&pid=ImgDetMain" class="w-full h-auto rounded-lg object-cover shadow-md">
+                            </div>
+                            <div class="md:w-2/3">
+                                <h2 class="text-2xl font-semibold text-blue-700">2ème Année de Génie Informatique</h2>
+                                <h3 class="text-lg text-blue-500 mb-2"><a href="https://estbm.ac.ma/">Ecole Supérieure de Technologie (EST) Béni Mellal</a></h3>
+                                <p class="text-gray-700 mb-2">2024 - 2025</p>
+                                <p class="text-gray-600"></p>
+                                <ul class="mt-3 text-sm text-gray-500 list-disc pl-5">
+                                    <li>Programmation Wweb</li>
+                                    <li>Mathématiques Appliquées</li>
+                                    <li>Base de Données Avancées</li>
+                                    <li>Génie Logiciel</li>
+                                    <li>Projet de Fin d'Etudes</li>
+                                    <li>Stage technique</li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div>
+                
+                <!-- Élément 2 -->
+                <div class="education-card left">
+                    <div class="education-content">
+                        <div class="flex flex-col md:flex-row gap-6">
+                            <div class="md:w-1/3 etab-img">
+                                <img src="https://th.bing.com/th/id/OIP.W7W2eeTpRsNZ-7q26mw55wHaFj?rs=1&pid=ImgDetMain" class="w-full h-auto rounded-lg object-cover shadow-md">
+                            </div>
+                            <div class="md:w-2/3">
+                                <h2 class="text-2xl font-semibold text-blue-700">1ère Année de Génie Informatique</h2>
+                                <h3 class="text-lg text-blue-500 mb-2"><a href="https://estbm.ac.ma/">Ecole Supérieure de Technologie (EST) Béni Mellal</a></h3>
+                                <p class="text-gray-700 mb-2">2023 - 2024</p>
+                                <p class="text-gray-600"> </p>
+                                <ul class="mt-3 text-sm text-gray-500 list-disc pl-5">
+                                    <li>Architecture des Ordinateurs</li>
+                                    <li>Algorithme et Programmation</li>
+                                    <li>Programmation Orientée Objet</li>
+                                    <li>Système d'Exploitation</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-        <div class="bloc-competences">
-            <h2>Compétences principales</h2>
-            <div class="competences">
-                <div class="competence">
-                    <div class="competence-img"></div>
-                    <div class="details-competence">
-                        <div><span>Developpement Web</span></div>
-                        <div class="niveau-competence"><span></span></div>
-                        <p>Obtention du Baccalauréat Sciences Mathématiques A</p>
-                    </div>
-                </div>
-                <div class="competence">
-                    <div class="competence-img"></div>
-                    <div class="details-competence">
-                        <div><span>Developpement Web</span></div>
-                        <div class="niveau-competence"><span></span></div>
-                        <p>Obtention du Baccalauréat Sciences Mathématiques A</p>
-                    </div>
-                </div>
-                <div class="competence">
-                    <div class="competence-img"></div>
-                    <div class="details-competence">
-                        <div><span>Developpement Web</span></div>
-                        <div class="niveau-competence"><span></span></div>
-                        <p>Obtention du Baccalauréat Sciences Mathématiques A</p>
-                    </div>
-                </div>
-                <div class="competence">
-                    <div class="competence-img"></div>
-                    <div class="details-competence">
-                        <div><span>Developpement Web</span></div>
-                        <div class="niveau-competence"><span></span></div>
-                        <p>Obtention du Baccalauréat Sciences Mathématiques A</p>
+                <!-- Élément 3 -->
+                <div class="education-card right">
+                    <div class="education-content">
+                        <div class="flex flex-col md:flex-row gap-6">
+                            <div class="md:w-1/3 etab-img">
+                                <img src="https://github.com/drbynz0/My_Web_Site/blob/master/LSCHBR.jpg?raw=true" alt="Lycée traditionnel avec cour centrale pavée, façade en pierre avec fenêtres hautes et drapeau français flottant devant" class="w-full h-auto rounded-lg object-cover shadow-md">
+                            </div>
+                            <div class="md:w-2/3">
+                                <h2 class="text-2xl font-semibold text-blue-700">Baccalauréat Scientifique</h2>
+                                <h3 class="text-lg text-blue-500 mb-2">Lycée Scientifique Cheick Hamdan Ben Rachid (LSCHBR)</h3>
+                                <p class="text-gray-700 mb-2">2021 - 2022</p>
+                                <p class="text-gray-600">Option Sciences de l'Ingénieur, spécialité Mathématiques. Préparation intensive aux études supérieures scientifiques.</p>
+                                <ul class="mt-3 text-sm text-gray-500 list-disc pl-5">
+                                    <li>Mathématique</li>
+                                    <li>Physique - Chimie</li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="bloc-projets">
-            <h2>Mes projets</h2>
+            <div class="line-end"></div>
+        </section>
+
+        <section class="skills-section section-padding bg-light bloc-competences py-16 bg-white" id="competences">
+            <h2 class="section-title">Compétences Principales</h2>
+            <div class="container">
+                <div class="skills-grid">
+                    <div class="skill-card">
+                        <div class="skill-icon"><i class="fas fa-code"></i></div>
+                        <h3>Développement Web</h3>
+                        <p>Solide base en HTML, CSS et JavaScript (niveau intermédiaire). Enthousiaste à l'idée d'apprendre et de développer mes compétences pour créer des sites web attrayants et fonctionnels.</p>
+                    </div>
+                    <div class="skill-card">
+                        <div class="skill-icon"><i class="fas fa-palette"></i></div>
+                        <h3>Infographie</h3>
+                        <p>Expérience dans la création de graphiques, de multimédia et de designs simples à l'aide d'outils comme Canva, CapCut et d'autres applications.</p>
+                    </div>
+                    <div class="skill-card">
+                        <div class="skill-icon"><i class="fas fa-database"></i></div>
+                        <h3>Gestion de Bases de Données</h3>
+                        <p>Connaissance des bases de données relationnelles et non relationnelles. Capacité à concevoir des schémas de base de données simples et à effectuer des requêtes SQL de base.</p>
+                    </div>
+                    <div class="skill-card">
+                        <div class="skill-icon"><i class="fas fa-mobile-alt"></i></div>
+                        <h3>Développement Mobile</h3>
+                        <p>Connaissance des principes de base du développement mobile. Intérêt pour l'apprentissage de frameworks comme React Native ou Flutter pour créer des applications mobiles.</p>
+                    </div>
+                    <div class="skill-card">
+                        <div class="skill-icon"><i class="fas fa-project-diagram"></i></div>
+                        <h3>Gestion de Projet</h3>
+                        <p>Compréhension des principes de base de la gestion de projet. Capacité à planifier, organiser et exécuter des projets simples en utilisant des outils de gestion de projet.</p>
+                    </div>
+                    <div class="skill-card">
+                        <div class="skill-icon"><i class="fas fa-chart-line"></i></div>
+                        <h3>Analyse de Données</h3>
+                        <p>Connaissance des principes de base de l'analyse de données. Capacité à utiliser des outils comme Excel ou Google Sheets pour effectuer des analyses de données simples.</p>
+                    </div>
+                </div>
+                <div class="mt-12 grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <!-- Compétence technique supplémentaire -->
+                    <div class="bg-slate-50 p-4 rounded-lg border border-slate-200">
+                        <div class="text-indigo-600 mb-2">
+                            <i class="fas fa-laptop-code h-8 w-8"></i>
+                        </div>
+                        <h3 class="font-semibold text-slate-800 mb-1">Langages</h3>
+                        <p class="text-slate-600 text-sm">Python, JavaScript, SQL, R</p>
+                    </div>
+                    
+                    <!-- Framework -->
+                    <div class="bg-slate-50 p-4 rounded-lg border border-slate-200">
+                        <div class="text-indigo-600 mb-2">
+                            <i class="fas fa-laptop-code h-8 w-8"></i>
+                        </div>
+                        <h3 class="font-semibold text-slate-800 mb-1">Frameworks</h3>
+                        <p class="text-slate-600 text-sm">TensorFlow, PyTorch, React, Django</p>
+                    </div>
+                    
+                    <!-- Outils -->
+                    <div class="bg-slate-50 p-4 rounded-lg border border-slate-200">
+                        <div class="text-indigo-600 mb-2">
+                            <i class="fas fa-toolbox h-8 w-8"></i>
+                        </div>
+                        <h3 class="font-semibold text-slate-800 mb-1">Outils</h3>
+                        <p class="text-slate-600 text-sm">Git, Docker, Jupyter, Tableau</p>
+                    </div>
+                    
+                    <!-- Langues -->
+                    <div class="bg-slate-50 p-4 rounded-lg border border-slate-200">
+                        <div class="text-indigo-600 mb-2">
+                            <i class="fas fa-language h-8 w-8"></i>
+                        </div>
+                        <h3 class="font-semibold text-slate-800 mb-1">Langues</h3>
+                        <p class="text-slate-600 text-sm">Français (natif), Anglais (courant), Espagnol (intermédiaire)</p>
+                    </div>
+                </div>
+                <div class="show-more-btn"><a href="#projets">Voir plus</a></div>
+            </div>
+        </section>
+
+        <section class="bloc-projets section-padding" id="projets">
+            <h2>Derniers projets</h2>
             <div class="projets">
-                <div class="projet">
-                    <a href="">
-                    <div class="projet-apercu">
-                        <video autoplay loop muted playsinline class="projet-video">
-                            <source src="D:\Mes videos\miniproject.mp4" type="video/mp4">
-                            Ton navigateur ne supporte pas la vidéo.
-                        </video>
-                        <div class="details-projet">
-                            <h3>Projet 1</h3>
-                            <p>Projet de création d'une application de gestion des commandes et des factures</p>
-                        </div>
-                        <div class="projet-github">
-                            <a href="" title="Voir le projet dans github"><i class="fab fa-github"></i> Github</a>
+                <article class="project-card" data-category="web">
+                    <div class="project-media">
+                        <img src="https://images.unsplash.com/photo-1547658719-da2b51169166?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Site web portfolio">
+                    </div>
+                    <div class="project-info">
+                        <span class="project-category">Développement Web</span>
+                        <h3 class="project-title">Portfolio Personnel</h3>
+                        <p class="project-description">Création d'un site portfolio responsive avec HTML, CSS et JavaScript. Intégration d'animations modernes et d'une interface utilisateur intuitive.</p>
+                        <div class="project-links">
+                            <a href="#" class="project-link" target="_blank"><i class="fas fa-external-link-alt"></i> Voir le projet</a>
+                            <a href="#" class="project-link" target="_blank"><i class="fab fa-github"></i> Code source</a>
                         </div>
                     </div>
-                    </a>
-                </div>
-                <div class="projet">
-                    <a href="">
-                    <div class="projet-apercu">
-                        <video autoplay loop muted playsinline class="projet-video">
-                            <source src="D:\Mes videos\miniproject.mp4" type="video/mp4">
-                            Ton navigateur ne supporte pas la vidéo.
-                        </video>
-                        <div class="details-projet">
-                            <h3>Projet 2</h3>
-                            <p>Projet de création d'une application de Web Scraping</p>
-                        </div>
-                        <div class="projet-github">
-                            <a href="" title="Voir le projet dans github"><i class="fab fa-github"></i> Github</a>
+                </article>
+                <article class="project-card" data-category="mobile">
+                    <div class="project-media">
+                        <img src="https://images.unsplash.com/photo-1547658719-da2b51169166?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Application mobile de gestion de tâches">
+                    </div>
+                    <div class="project-info">
+                        <span class="project-category">Application Mobile</span>
+                        <h3 class="project-title">Gestionnaire de Tâches</h3>
+                        <p class="project-description">Développement d'une application mobile pour la gestion des tâches quotidiennes. Utilisation de React Native pour une expérience utilisateur fluide.</p>
+                        <div class="project-links">
+                            <a href="#" class="project-link" target="_blank"><i class="fas fa-external-link-alt"></i> Voir le projet</a>
+                            <a href="#" class="project-link" target="_blank"><i class="fab fa-github"></i> Code source</a>
                         </div>
                     </div>
-                    </a>
-                </div>
+                </article>
+                <article class="project-card" data-category="data">
+                    <div class="project-media">
+                        <img src="https://images.unsplash.com/photo-1547658719-da2b51169166?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Analyse de données avec Python">
+                    </div>
+                    <div class="project-info">
+                        <span class="project-category">Analyse de Données</span>
+                        <h3 class="project-title">Analyse de Données</h3>
+                        <p class="project-description">Projet d'analyse de données utilisant Python et Pandas pour extraire des insights à partir de jeux de données complexes.</p>
+                        <div class="project-links">
+                            <a href="#" class="project-link" target="_blank"><i class="fab fa-youtube"></i> Voir la vidéo</a>
+                            <a href="#" class="project-link" target="_blank"><i class="fab fa-github"></i> Code source</a>
+                        </div>
+                    </div>
+                </article>
             </div>
-        </div>
+            <div class="show-more-btn"><a href="blog.html">Voir plus</a></div>
+        </section>
         <!--avis des visiteurs-->
         <!-- Bouton flottant pour ouvrir le bloc -->
         <button id="openReviewBlock" class="floating-button" title="Laissez un avis">
@@ -224,6 +322,14 @@
             <button id="closeReviewBlock" class="close-button">
                 <i class="fas fa-times"></i>
             </button>
+        </div>
+        <div class="acces-rapide">
+            <div class="acces-rapide-boutons">
+                <a href="#desc">Bienvenue</a>
+                <a href="#parcours">Parcours</a>
+                <a href="#competences">Compétences</a>
+                <a href="#projets">Projets</a>
+            </div>
         </div>
     </main>
     <script src="script.js"></script>

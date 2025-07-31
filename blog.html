@@ -24,7 +24,6 @@
                 </button>
                 <div id="entete2" class="entete2">
                     <a class="entete" href="index.html">Accueil</a>
-                    <a class="entete" href="blog.html">Blog</a>
                     <main id="bloc-sous-menu">
                         <span class="entete" id="summary"><i class="fas fa-chevron-down"></i> Qui suis je?</span>
                         <div id="sous-menu">
@@ -32,7 +31,8 @@
                             <a href="cv.html">Curriculum Vitae</a>
                         </div>
                     </main>
-                    <a class="entete" href="contact.php">Contact</a>
+                    <a class="entete activepage" href="blog.html">Projets</a>
+                    <a class="entete" href="contact.html">Contact</a>
                 </div>
             </nav>
         </div>
@@ -43,21 +43,110 @@
                 <a class="icon-insta" href="https://www.instagram.com/nizar.s00/" title="Mon Instagram" target="_blank"><i class="fab fa-instagram"></i></a>
                 <a class="icon-teleg" href="https://t.me/drbynz" title="Mon Telegram" target="_blank"><i class="fab fa-telegram"></i></a>
             </div>
-            <div id="userprofils"><i class="fas fa-user"></i></div>
-        </nav> 
-          
+        </nav>        
     </header>
-<div class="couv">
-    <div class="couv1">
-        <P>Mon blog</P> 
+    <section class="projects-hero">
+        <h1>Mes Projets</h1>
+        <p>Découvrez une sélection de mes réalisations en développement web, programmation et design. Chaque projet représente une étape de mon parcours d'apprentissage et de perfectionnement.</p>
+    </section>
+
+    <div class="projects-container">
+        <div class="category-filter">
+            <button class="filter-btn active" data-category="all">Tous les projets</button>
+            <button class="filter-btn" data-category="web">Développement Web</button>
+            <button class="filter-btn" data-category="mobile">Applications Mobiles</button>
+            <button class="filter-btn" data-category="data">Application Desktop</button>
+            <button class="filter-btn" data-category="programmation">Programmation</button>
+            <button class="filter-btn" data-category="design">Design Graphique</button>
+        </div>
+
+        <div class="projects-grid">
+            <!-- Projet 1 - Web -->
+            <article class="project-card" data-category="web">
+                <div class="project-media">
+                    <img src="https://images.unsplash.com/photo-1547658719-da2b51169166?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Site web portfolio">
+                </div>
+                <div class="project-info">
+                    <span class="project-category">Développement Web</span>
+                    <h3 class="project-title">Portfolio Personnel</h3>
+                    <ul class="project-tech">
+                        <li><i class="fab fa-html5"></i> HTML</li>
+                        <li><i class="fab fa-css3-alt"></i> CSS</li>
+                        <li><i class="fab fa-js"></i> JavaScript</li>
+                    </ul>
+                    <p class="project-description">Création d'un site portfolio responsive avec HTML, CSS et JavaScript. Intégration d'animations modernes et d'une interface utilisateur intuitive.</p>
+                    <div class="project-links">
+                        <a href="#" class="project-link" target="_blank"><i class="fas fa-external-link-alt"></i> Voir le projet</a>
+                        <a href="#" class="project-link" target="_blank"><i class="fab fa-github"></i> Code source</a>
+                    </div>
+                </div>
+            </article>
+
+
+            <article class="project-card" data-category="mobile">
+                <div class="project-media">
+                    <img src="https://scontent.fcmn3-1.fna.fbcdn.net/v/t39.30808-6/510190727_1733815850553229_3445306292102805484_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=127cfc&_nc_ohc=1ST8va5DAqcQ7kNvwEpxDaT&_nc_oc=AdmC_nVsB_MqYe6fdaOUbxtO_mvSDgCKircBHeUeeh4hWPg1SL_nkFgQC3tf2_CBmgA&_nc_zt=23&_nc_ht=scontent.fcmn3-1.fna&_nc_gid=runt8a2Dhk3Mwh2ckFxCnA&oh=00_AfQ337hVvTSWpYADdRCdztTygihJtYTb8qmegHFmSa6xSA&oe=68909EE5" alt="Application mobile">
+                </div>
+                <div class="project-info">
+                    <span class="project-category">Applications Mobiles</span>
+                    <h3 class="project-title">Application de Gestion de Stock</h3>
+                    <ul class="project-tech">
+                        <li><i class="fa-brands fa-flutter"></i> Flutter</li>
+                        <li><i class="fab fa-python"></i> Python</li>
+                        <li><i class="fab fa-django"></i> Django Rest Framework</li>
+                        <li><i class="fas fa-database"></i> PostgreSQL</li>
+                    </ul>
+                    <p class="project-description">Création d'une application mobile Android pendant mon <strong style="font-style: italic;">stage de fin d'études</strong> pour la gestion de stock avec interface utilisateur intuitive et un système de gestion de commande.</p>
+                    <div class="project-links">
+                        <a href="https://www.linkedin.com/posts/soilihi-nizar-0b2a8a25a_cti-app-activity-7341495378652868609-P0BK?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD_gJAYBMsKMURM5R3w7pjKjgYiB8ZtQ0Lk" class="project-link" target="_blank"><i class="fa-brands fa-linkedin"></i> Voir le projet</a>
+                        <a href="https://github.com/drbynz0/app_stock" rel="noopener noreferrer" class="project-link" target="_blank"><i class="fab fa-github"></i> Code source</a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="project-card" data-category="data">
+                <div class="project-media">
+                    <img src="https://images.unsplash.com/photo-1554151238-0f3f8b0c1d2f?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Application desktop">
+                </div>
+                <div class="project-info">
+                    <span class="project-category">Application Desktop</span>
+                    <h3 class="project-title">Application de Gestion des Commandes et des Factures</h3>
+                    <ul class="project-tech">
+                        <li><i class="fab fa-java"></i> Java</li>
+                        <li><i class="fas fa-database"></i> MySQL</li>
+                        <li><i class="fas fa-file-csv"></i> CSV Export</li>
+                    </ul>
+                    <p class="project-description">Création d'une application desktop en Java pour la gestion des commandes et des factures avec interface graphique et export en CSV.</p>
+                    <div class="project-links">
+                        <a href="#" class="project-link" target="_blank"><i class="fab fa-youtube"></i> Démo</a>
+                        <a href="https://github.com/drbynz0/Gestion_des_commandes_et_des_factures" class="project-link" target="_blank"><i class="fab fa-github"></i> Code source</a>
+                    </div>
+                </div>
+            </article>
+            <article class="project-card" data-category="programmation">
+                <div class="project-media">
+                    <div class="project-media">
+                        <img src="https://imgs.search.brave.com/-h2gN72NaL2r14MoxLd5RNZWKsejSWZ83OqZBAZLPD4/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/c2h1dHRlcnN0b2Nr/LmNvbS9pbWFnZS12/ZWN0b3Ivd2ViLXNj/cmFwaW5nLWlzb21l/dHJpYy1iYW5uZXIt/ZGF0YS0yNjBudy0x/ODY2ODg5NTA3Lmpw/Zw" alt="Design graphique">
+                    </div>
+                </div>
+                <div class="project-info">
+                    <span class="project-category">Programmation</span>
+                    <h3 class="project-title">Outil d'automatisation</h3>
+                    <ul class="project-tech">
+                        <li><i class="fab fa-csharp"></i> C#</li>
+                        <li><i class="fab fa-selenium"></i> Selenium</li>
+                        <li><i class="fas fa-file-excel"></i> Excel Export</li>
+                    <p class="project-description">Développement d'un script C# avec Selenium dans mon <strong style="font-style: italic;">stage d'initiation</strong> pour automatiser la collecte de données sur le web et leur export en format Excel.</p>
+                    <div class="project-links">
+                        <a href="https://github.com/drbynz0/Stage-init" rel="noopener noreferrer" class="project-link" target="_blank"><i class="fab fa-github"></i> Code source</a>
+                    </div>
+                </div>
+            </article>
+        </div>
     </div>
-    <a href="https://www.youtube.com/@DreamBoyNz/videos">
-        <i class="fab fa-youtube"></i>Chaîne YouTube
-    </a>
-</div>
+
     
-   <center><div style="margin-top: 100px;"><i class="fa-solid fa-circle-notch fa-spin"></i> En cours de développement.</div></center>
-        
+    <script src="scriptbg.js"></script> 
     <script src="script.js"></script>
 </body> 
 <footer>
