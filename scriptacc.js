@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     educationCards.forEach((card, index) => {
         card.style.opacity = 0;
-        card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+        card.style.transition = 'opacity 1s ease, transform 1s ease';
         
         if (card.classList.contains('left')) {
             card.style.transform = 'translateX(-20px)';
@@ -37,34 +37,28 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-
-document.querySelectorAll('.projet-apercu').forEach(function(apercu) {
-    const video = apercu.querySelector('.projet-video');
-    const fullscreenBtn = apercu.querySelector('.fullscreen-btn');
-    const progressBar = apercu.querySelector('.video-progress');
-
-    if (fullscreenBtn && video) {
-        fullscreenBtn.addEventListener('click', function() {
-            if (video.requestFullscreen) {
-                video.requestFullscreen();
-            } else if (video.webkitRequestFullscreen) {
-                video.webkitRequestFullscreen();
-            } else if (video.msRequestFullscreen) {
-                video.msRequestFullscreen();
+// Animation des compétences principales
+document.addEventListener('DOMContentLoaded', function() {
+    const competenceCards = document.querySelectorAll('.skill-card');
+    const otherSkills = document.querySelectorAll('.other-skill');
+    const allSkills = [...competenceCards, ...otherSkills];
+    
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = 1;
+                entry.target.style.transform = 'rotateX(0) translateY(0)';
             }
         });
-    }
-
-    if (progressBar && video) {
-        video.addEventListener('timeupdate', function() {
-            const percent = (video.currentTime / video.duration) * 100;
-            progressBar.value = percent || 0;
-        });
-
-        progressBar.addEventListener('input', function() {
-            video.currentTime = (progressBar.value / 100) * video.duration;
-        });
-    }
+    }, { threshold: 0.1 });
+    
+    allSkills.forEach((card, index) => {
+        card.style.opacity = 0;
+        card.style.transition = 'opacity 1s ease, transform 1s ease';
+        card.style.transform = 'rotateX(30deg) translateY(20px)';
+        
+        observer.observe(card);
+    });
 });
 
 

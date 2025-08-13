@@ -26,26 +26,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Toggle dropdown menu (for desktop and mobile)
-    if (dropdownToggle && dropdownMenu) {
-        dropdownToggle.addEventListener('click', (e) => {
-            e.preventDefault(); // Prevent default link behavior
-            // For desktop, just toggle the class
-            if (window.innerWidth > 768) {
-                dropdownMenu.classList.toggle('show');
-            } else { // For mobile, toggle the class and adjust height
-                dropdownMenu.style.display = dropdownMenu.style.display === 'block' ? 'none' : 'block';
-            }
-        });
-
-        // Close dropdown if clicked outside (desktop only)
-        document.addEventListener('click', (e) => {
-            if (window.innerWidth > 768 && !dropdownToggle.contains(e.target) && !dropdownMenu.contains(e.target)) {
-                dropdownMenu.classList.remove('show');
-            }
-        });
-    }
-
     // Smooth scrolling for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
@@ -93,4 +73,3 @@ document.addEventListener('DOMContentLoaded', () => {
         el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
         observer.observe(el);
     });
-});
