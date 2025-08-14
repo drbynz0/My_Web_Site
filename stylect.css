@@ -1,94 +1,278 @@
-.imgprofil2 i {
-    font-size: 3rem;
-    color: #2CA5E0;
+/* Style général de la page contact */
+#contact {
+    margin-top: 100px;
+    color: #e0e0e0;
+    padding: 3rem 2rem;
+    min-height: calc(100vh - 120px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-#contact h2 {
-    text-align: center;
-    font-family:monospace;
-}
-.coordonnees {
+
+.contact {
+    display: flex;
+    max-width: 1200px;
+    width: 100%;
+    background: rgba(23, 32, 64, 0.8);
+    border-radius: 15px;
+    border: 1px solid rgba(92, 167, 248, 0.2);
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
     position: relative;
+}
+
+.contact::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') center/cover;
+    opacity: 0.1;
+    z-index: 0;
+}
+
+/* Section coordonnées */
+.coordonnees {
+    flex: 1;
+    padding: 3rem;
+    position: relative;
+    z-index: 1;
+    background: rgba(10, 10, 23, 0.7);
     display: flex;
     flex-direction: column;
     align-items: center;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    padding: 12px;
-    border-radius: 12px;
-    background-color: #22232e75;
-    max-width: 100%;
-    box-shadow: 0px 5px 5px 5px rgba(0, 0, 0, 0.349);
-
-}
-.co-logo strong {
-    font-size: 20px;
-}
-.co-logo i {
-    font-size: 20px;
-    margin-right: 10px;
-}
-.coordonnees h3 {
     text-align: center;
 }
-.coordonnees P {
-    font-size: 15px;
-    color: rgba(228, 229, 230, 0.719);
-}
-.coordonnee {
-    color: #cacbcc;
-}
-.phone{
-    color: #007bff;
-}
-.envelope {
-    color: #b14e47;
-}
-.map {
-    color: #cd1b1b;
-}
-.contact-icon-res {
-    display: inline-flex;
-    justify-content: space-between;
+
+.imgprofil2 {
+    width: 80px;
+    height: 80px;
+    background: rgba(92, 167, 248, 0.2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
 }
 
-.message {
-    position: relative;
-    width: 95%;
-    margin-top: 0%;
-    padding: 20px;
-    border-radius: 5px;
-  }
-  .champs-saisie {
-    margin-bottom: 20px;
-  }
-  input[type="text"],
-  input[type="email"],
-  input[type="tel"],
-  #message
-  {
-    width: 95%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-  }
-  textarea {
-    resize: both;
-    width: 95%;
-  }
-  button {
-    background-color: #007bff;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 50px;
-    cursor: pointer;
-  }
-  button:hover {
-    background-color: #0056b3;
-  }
-.contact {
-    margin-top: 5%;
+.contact-icon {
+    font-size: 2.5rem;
+    color: #5ca7f8;
+}
+
+.coordonnees h3 {
+    color: #5ca7f8;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.coordonnees p {
+    color: #b0b0b0;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    font-size: 1rem;
+}
+
+/* Coordonnées de contact */
+.co-logo {
+    text-align: left;
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+.co-logo span {
+    display: inline-block;
+    width: 30px;
+    color: #5ca7f8;
+    text-align: center;
+}
+
+.co-logo strong {
+    font-weight: 500;
+    color: #e0e0e0;
+    transition: color 0.3s ease;
+}
+
+.co-logo a:hover strong {
+    color: #5ca7f8;
+}
+
+/* Icônes réseaux sociaux */
+.contact-icon-res {
     display: flex;
-    justify-content: center;
+    gap: 1.5rem;
+    margin-top: auto;
+}
+
+.contact-icon-res a {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
     align-items: center;
-    margin: 10px;
+    justify-content: center;
+    color: #e0e0e0;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+    text-decoration: none   ;
+}
+
+.icon-fb { background: rgba(66, 103, 178, 0.2); }
+.icon-wap { background: rgba(37, 211, 102, 0.2); }
+.icon-insta { background: rgba(225, 48, 108, 0.2); }
+.icon-teleg { background: rgba(0, 136, 204, 0.2); }
+
+.icon-fb:hover { background: #4267B2; transform: translateY(-5px); }
+.icon-wap:hover { background: #25D366; transform: translateY(-5px); }
+.icon-insta:hover { background: #E1306C; transform: translateY(-5px); }
+.icon-teleg:hover { background: #0088CC; transform: translateY(-5px); }
+
+/* Section formulaire */
+.message {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1;
+    padding: 3rem;
+    position: relative;
+    z-index: 1;
+    background: rgba(23, 32, 64, 0.6);
+}
+
+.message h2 {
+    color: #5ca7f8;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    position: relative;
+}
+
+.message h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background: #5ca7f8;
+}
+
+/* Formulaire */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.champs-saisie {
+    position: relative;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(92, 167, 248, 0.3);
+    border-radius: 8px;
+    color: #e0e0e0;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    border-color: #5ca7f8;
+    box-shadow: 0 0 0 2px rgba(92, 167, 248, 0.2);
+    background: rgba(255, 255, 255, 0.15);
+}
+
+input::placeholder, textarea::placeholder {
+    color: #a0a0a0;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+/* Bouton d'envoi */
+
+button[type="submit"] {
+    background: linear-gradient(90deg, #5ca7f8, #3a7bc8);
+    color: #0a0a17;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 1rem;
+    box-shadow: 0 4px 15px rgba(92, 167, 248, 0.3);
+}
+
+button[type="submit"]:hover {
+    background: linear-gradient(90deg, #3a7bc8, #5ca7f8);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(92, 167, 248, 0.4);
+}
+
+/* Animation */
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+}
+
+.contact-icon-res a:hover i {
+    animation: float 1s ease-in-out infinite;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .contact {
+        flex-direction: column;
+    }
+    
+    .coordonnees, .message {
+        padding: 2rem;
+    }
+    
+    .coordonnees {
+        border-bottom: 1px solid rgba(92, 167, 248, 0.2);
+    }
+}
+
+@media (max-width: 576px) {
+    #contact {
+        padding: 2rem 1rem;
+    }
+    
+    .coordonnees, .message {
+        padding: 1.5rem;
+    }
+    
+    .imgprofil2 {
+        width: 70px;
+        height: 70px;
+    }
+    
+    .contact-icon {
+        font-size: 2rem;
+    }
+    
+    .message h2 {
+        font-size: 1.5rem;
+    }
+    
+    input, textarea {
+        padding: 0.8rem;
+    }
+    
+    button[type="submit"] {
+        padding: 0.8rem 1.5rem;
+    }
 }

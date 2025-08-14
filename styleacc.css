@@ -360,12 +360,8 @@
 /* Compétences */
 .skills-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     gap: 30px;
-    perspective: 1000px;
-}
-
-.other-skills {
     perspective: 1000px;
 }
 
@@ -376,18 +372,23 @@
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 .skill-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+    box-shadow: 0 15px 30px rgba(92, 167, 248, 0.2);
+    border-color: rgba(92, 167, 248, 0.5);
 }
 
 .skill-card .skill-icon {
     font-size: 3em;
     color: rgb(125, 220, 239);
     margin-bottom: 20px;
+    transition: transform 0.3s ease;
+}
+
+.skill-card:hover .skill-icon {
+    transform: scale(1.2);
 }
 
 .skill-card h3 {
